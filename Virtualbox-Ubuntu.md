@@ -23,3 +23,12 @@
 ### 공유 폴더 마운트
 * `sudo mkdir /mnt/share`
 * `sudo mount -t vboxsf 폴더이름 /mnt/share`
+
+### `.bz2` 파일 압축풀기
+* `tar -jxvf 파일명`
+* gunzip은 -j 대신 -z
+
+### 프로그램 컴파일 & 설치
+* `make`로 내부 컴파일 실시
+* `sudo make install` : 내용 설치, `sudo`로 했기 때문에 경로 없이 실행 가능
+
