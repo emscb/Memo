@@ -34,7 +34,9 @@
 * `sudo make install` : 내용 설치, `sudo`로 했기 때문에 경로 없이 실행 가능
 
 ### line을 이용해보자
-* `awk` : line단위로 실행
-* `NR`이 line number를 의미해줘 (읽고 있는 line)
+* `awk` : line단위로 실행, \t 이외의 whitespace도 field separator로 사용 가능
+* `NR` : line number를 의미 (읽고 있는 line)
+* `NF` : 해당 line의 field가 몇 개인지
 * `awk '$2 == 147'` : 2번째 column이 147인 line을 찾아줌
 * '' 사이에 `{print $1 $4}` 표기하면 해당되는 line의 해당 column을 출력
+* '' 사이 내용을 text로 저장해서 간편하게 사용가능 (`-f 파일명` 옵션 사용)
