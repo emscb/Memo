@@ -24,11 +24,17 @@
 * `sudo mkdir /mnt/share`
 * `sudo mount -t vboxsf 폴더이름 /mnt/share`
 
-### `.bz2` 파일 압축풀기
-* `tar -jxvf 파일명`
+### 파일 압축풀기
+* `.bz2` : `tar -jxvf 파일명`
 * gunzip은 -j 대신 -z
+* `.tgz` : `tar -zxvf 파일명`
 
 ### 프로그램 컴파일 & 설치
 * `make`로 내부 컴파일 실시
 * `sudo make install` : 내용 설치, `sudo`로 했기 때문에 경로 없이 실행 가능
 
+### line을 이용해보자
+* `awk` : line단위로 실행
+* `NR`이 line number를 의미해줘 (읽고 있는 line)
+* `awk '$2 == 147'` : 2번째 column이 147인 line을 찾아줌
+* '' 사이에 `{print $1 $4}` 표기하면 해당되는 line의 해당 column을 출력
