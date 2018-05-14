@@ -25,8 +25,7 @@
 * `sudo mount -t vboxsf 폴더이름 /mnt/share`
 
 ### 파일 압축풀기
-* `.bz2` : `tar -jxvf 파일명`
-* gunzip은 -j 대신 -z
+* `.bz2` : `tar -jxvf 파일명` (gunzip은 -j 대신 -z)
 * `.tgz` : `tar -zxvf 파일명`
 
 ### 프로그램 컴파일 & 설치
@@ -40,3 +39,4 @@
 * `awk '$2 == 147'` : 2번째 column이 147인 line을 찾아줌
 * '' 사이에 `{print $1 $4}` 표기하면 해당되는 line의 해당 column을 출력
 * '' 사이 내용을 text로 저장해서 간편하게 사용가능 (`-f 파일명` 옵션 사용)
+* 터미널 내에서 탭 입력 시 : ^v탭
