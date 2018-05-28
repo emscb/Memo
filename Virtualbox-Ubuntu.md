@@ -32,7 +32,7 @@
 * `make`로 내부 컴파일 실시
 * `sudo make install` : 내용 설치, `sudo`로 했기 때문에 경로 없이 실행 가능
 
-### line을 이용해보자
+### line을 이용해보자 (`awk`)
 * `awk` : line단위로 실행, \t 이외의 whitespace도 field separator로 사용 가능
 * 기본 틀
 > `awk 'pattern {action}' filename`
