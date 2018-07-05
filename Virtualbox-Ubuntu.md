@@ -21,8 +21,8 @@
 * lock 파일때문에 안되면 지워라. (먼저 업데이트하는 친구가 lock을 만들어놓음, 충돌방지)
 
 ### 공유 폴더 마운트
-* `sudo mkdir /mnt/share`
-* `sudo mount -t vboxsf 폴더이름 /mnt/share`
+* `sudo mkdir 공유할폴더`
+* `sudo mount -t vboxsf 호스트폴더이름 게스트폴더이름`
 
 ### 파일 압축풀기
 * `.bz2` : `tar -jxvf 파일명` (gunzip은 -j 대신 -z)
