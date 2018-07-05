@@ -111,15 +111,23 @@ cat inputfile_name | sed 's/search_term/replace_term/'
 echo "This is test message" | sed 's/search_term/replace_term/'
 ```
 * 기본적으로 처음 찾은 단어만 치환해준다. 모든 단어를 치환하려면 g 스위치를 사용해야한다.
-`echo "sheena leads, sheila needs" | sed 's/sh/le/g'`
+```
+echo "sheena leads, sheila needs" | sed 's/sh/le/g'
+```
 
 * 검색할 단어에 '/'가 포함되어 있는 경우 이 separator를 '#'이나 '$', '_'로 바꿔주면 된다.
-`sed 's_/var/ftp/pup_/opt/ftp/com_' test.txt`
+```
+sed 's_/var/ftp/pup_/opt/ftp/com_' test.txt
+```
 
 * 단어 앞에 원하는 말 붙이기 ('&' 이용)
-`sed 's/surendra/Mr. &/' test.txt`
+```
+sed 's/surendra/Mr. &/' test.txt
+```
 
 * 그루핑해서 순서 뒤집기
-`echo "abc123suri" | sed 's/([a-z]*)([0-9]*)([a-z]*)/312/`
+```
+echo "abc123suri" | sed 's/([a-z]*)([0-9]*)([a-z]*)/312/
+```
     * abc123suri \> suriabc123
 
