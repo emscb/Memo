@@ -126,8 +126,9 @@ sed 's/surendra/Mr. &/' test.txt
 ```
 
 * 그루핑해서 순서 뒤집기
+    * abc123suri \> suriabc123
 ```
 echo "abc123suri" | sed 's/([a-z]*)([0-9]*)([a-z]*)/312/
 ```
-    * abc123suri \> suriabc123
+
 
