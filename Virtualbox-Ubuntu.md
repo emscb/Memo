@@ -105,7 +105,6 @@ $n|입력 레코드의 n 번째 필드
 -r|확장 정규표현식 사용 (GNU 환경에서만, OS X/BSD에서는 -E)
 -n|바뀐 줄만 출력
 -i|바뀐 내용을 원본 파일에 저장
--w|바뀐 내용을 새 파일에 저장
 
 ##### 검색과 치환 (search)
 ```
@@ -148,7 +147,7 @@ cat tem.txt | sed -n 's/surendra/bca/p'
 sed 's/baby/dady/' < tem.txt > abc.txt
 ```
 
-* -w : 변경점을 다른 파일에 저장
+* w : 변경점을 다른 파일에 저장
 ```
 sed 's/baby/dady/w abc.txt' tem.txt
 ```
