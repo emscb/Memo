@@ -103,6 +103,9 @@ $n|입력 레코드의 n 번째 필드
 :-:|-
 -e|하나의 지시 (여러번 가능)
 -r|확장 정규표현식 사용 (GNU 환경에서만, OS X/BSD에서는 -E)
+-n|바뀐 줄만 출력
+-i|바뀐 내용을 원본 파일에 저장
+-w|바뀐 내용을 새 파일에 저장
 
 ##### 검색과 치환 (search)
 ```
@@ -131,4 +134,92 @@ sed 's/surendra/Mr. &/' test.txt
 echo "abc123suri" | sed 's/([a-z]*)([0-9]*)([a-z]*)/312/
 ```
 
+##### 출력 (-n과 p 스위치)
+* 행을 출력하라 (p 스위치)
+* -n : 출력 억제, 바뀐 줄만 출력
+```
+cat tem.txt | sed -n 's/surendra/bca/p'
+```
+
+##### 수정 (-i, w, d 스위치와 쉘 redirection)
+* -i : 변경점을 원본 파일에 적용
+* 리다이렉션으로도 원본 파일에 적용할 수 있다.
+```
+sed 's/baby/dady/' < tem.txt > abc.txt
+```
+
+* -w : 변경점을 다른 파일에 저장
+```
+sed 's/baby/dady/w abc.txt' tem.txt
+```
+
+##### 여러 `sed` 명령어와 연속 연산자 (-e와 ; 스위치)
+* -e로 여러 명령 한번에 처리하기
+```
+sed -e 's/surendra/bca/' -e 's/mouni/mca/' -e '/s/baby/bba/' tem.txt
+```
+
+* ; (연속 연산자)로 더 짧게!
+```
+sed 's/Surendra/bca/;s/mouni/mca/;s/baby/bba/' tem.txt
+```
+
+##### 줄 번호 연산자 (,와 = 스위치)
+* 세번 째 줄 내용만 검색해서 치환하기
+```
+sed '3 s/Syrendra/bca/' tem.txt
+```
+
+* 1-4번 째 줄 내용만 검색해서 치환하기
+```
+sed '1,4 s/Syrendra/bca/' tem.txt
+```
+
+* 두 번째 줄부터 문서 끝까지 검색해서 치환하기
+```
+sed '2,$ s/Surendra/bca/' tem.txt
+```
+
+* 검색해서 치환 후 모든 줄에 줄 번호 넣기 (= 옵션)
+```
+sed = tem.txt
+```
+
+* 번호를 같은 줄에 넣기
+```
+sed = tem.txt | sed 'N;s/n/t/'
+```
+
+##### 검색 연산자 (/단어/)
+* 한 단어를 검색해서 걸린 줄에서 작업하기
+```
+sed '/surendra/ s/audi/xyz/' tem.txt
+```
+
+* 특정 범위의 줄 내에서 작업하기
+```
+sed '3,/Surendra/ s/audi/xyz/' tem.txt
+```
+
+* 찾은 단어가 있는 줄부터 문서 끝까지를 범위로 작업하기
+```
+sed '/Surendra/,$ s/audi/xyz/' tem.txt
+```
+
+##### 부정 연산자 (!)
+* w, p, d 옵션과 함께 사용
+* abc라는 단어가 없는 모든 출을 출력
+```
+sed -n '/abc/ !p` tem.txt
+```
+
+* surendra라는 단어가 있는 줄을 제외한 모든 줄을 삭제
+```
+sed '/surendra/ !d' tem.txt
+```
+
+* 1-3 줄만 제외하고 나머지 줄 삭제
+```
+sed '1,3 !d'
+```
 
