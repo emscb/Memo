@@ -95,3 +95,31 @@ $n|입력 레코드의 n 번째 필드
 
 ### Sorting
 * `sort -k 3 -r` : 3번 째 열을 기준으로 역행으로 정렬 (내림차순)
+
+### 스트림 에디터 (`sed`)
+* 지정한 지시에 따라 파일이나 파이트라인 입력을 편집해서 출력
+
+옵션|설명
+:-:|-
+-e|하나의 지시 (여러번 가능)
+-r|확장 정규표현식 사용 (GNU 환경에서만, OS X/BSD에서는 -E)
+
+##### 검색과 치환 (search)
+```
+sed 's/search_term/replace_term/' inputfile
+cat inputfile_name | sed 's/search_term/replace_term/'
+echo "This is test message" | sed 's/search_term/replace_term/'
+```
+* 기본적으로 처음 찾은 단어만 치환해준다. 모든 단어를 치환하려면 g 스위치를 사용해야한다.
+`echo "sheena leads, sheila needs" | sed 's/sh/le/g'`
+
+* 검색할 단어에 '/'가 포함되어 있는 경우 이 separator를 '#'이나 '$', '_'로 바꿔주면 된다.
+`sed 's_/var/ftp/pup_/opt/ftp/com_' test.txt`
+
+* 단어 앞에 원하는 말 붙이기 ('&' 이용)
+`sed 's/surendra/Mr. &/' test.txt`
+
+* 그루핑해서 순서 뒤집기
+`echo "abc123suri" | sed 's/([a-z]*)([0-9]*)([a-z]*)/312/`
+    * abc123suri \> suriabc123
+
