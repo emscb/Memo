@@ -224,5 +224,4 @@ sed '/surendra/ !d' tem.txt
 ```
 sed '1,3 !d'
 ```
->>>>>>> cd8cceba6c14538f9bd08ba0b75f8013660b9c6d
 
