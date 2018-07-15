@@ -21,8 +21,8 @@
 * lock 파일때문에 안되면 지워라. (먼저 업데이트하는 친구가 lock을 만들어놓음, 충돌방지)
 
 ### 공유 폴더 마운트
-* `sudo mkdir /mnt/share`
-* `sudo mount -t vboxsf 폴더이름 /mnt/share`
+* `sudo mkdir 공유할폴더`
+* `sudo mount -t vboxsf 호스트폴더이름 게스트폴더이름`
 
 ### 파일 압축풀기
 * `.bz2` : `tar -jxvf 파일명` (gunzip은 -j 대신 -z)
@@ -32,7 +32,7 @@
 * `make`로 내부 컴파일 실시
 * `sudo make install` : 내용 설치, `sudo`로 했기 때문에 경로 없이 실행 가능
 
-### line을 이용해보자 (`awk`)
+# line을 이용해보자 (`awk`)
 * `awk` : line단위로 실행, \t 이외의 whitespace도 field separator로 사용 가능
 * 기본 틀
 > `awk 'pattern {action}' filename`
@@ -79,7 +79,7 @@ $n|입력 레코드의 n 번째 필드
     * `!-2` : 2개전 명령행 실행
 * `:p` : 히스토리 치환 끝에 붙임으로써 명령어를 실행하지 않고 단순히 치환 결과만을 출력
 
-### 문자열 패턴 검색 (`grep`)
+# 문자열 패턴 검색 (`grep`)
 * 파일 내에서 지정한 패턴이나 문자열을 찾은 후에, 그 패턴을 포함하고 있는 모든 행을 표준 출력해준다.
 * `grep [-옵션] 패턴 파일명`
 * 옵션
@@ -95,5 +95,134 @@ $n|입력 레코드의 n 번째 필드
 
 ### Sorting
 * `sort -k 3 -r` : 3번 째 열을 기준으로 역행으로 정렬 (내림차순)
+<<<<<<< HEAD
 * `-n` : 숫자로 취급
+=======
+
+# 스트림 에디터 (`sed`)
+* 지정한 지시에 따라 파일이나 파이프라인 입력을 편집해서 출력
+
+옵션|설명
+:-:|-
+-e|하나의 지시 (여러번 가능)
+-r|확장 정규표현식 사용 (GNU 환경에서만, OS X/BSD에서는 -E)
+-n|바뀐 줄만 출력
+-i|바뀐 내용을 원본 파일에 저장
+
+##### 검색과 치환 (search)
+```
+sed 's/search_term/replace_term/' inputfile
+cat inputfile_name | sed 's/search_term/replace_term/'
+echo "This is test message" | sed 's/search_term/replace_term/'
+```
+* 기본적으로 처음 찾은 단어만 치환해준다. 모든 단어를 치환하려면 g 스위치를 사용해야한다.
+```
+echo "sheena leads, sheila needs" | sed 's/sh/le/g'
+```
+
+* 검색할 단어에 '/'가 포함되어 있는 경우 이 separator를 '#'이나 '$', '_'로 바꿔주면 된다.
+```
+sed 's_/var/ftp/pup_/opt/ftp/com_' test.txt
+```
+
+* 단어 앞에 원하는 말 붙이기 ('&' 이용)
+```
+sed 's/surendra/Mr. &/' test.txt
+```
+
+* 그루핑해서 순서 뒤집기
+    * abc123suri \> suriabc123
+```
+echo "abc123suri" | sed 's/([a-z]*)([0-9]*)([a-z]*)/312/
+```
+
+##### 출력 (-n과 p 스위치)
+* 행을 출력하라 (p 스위치)
+* -n : 출력 억제, 바뀐 줄만 출력
+```
+cat tem.txt | sed -n 's/surendra/bca/p'
+```
+
+##### 수정 (-i, w, d 스위치와 쉘 redirection)
+* -i : 변경점을 원본 파일에 적용
+* 리다이렉션으로도 원본 파일에 적용할 수 있다.
+```
+sed 's/baby/dady/' < tem.txt > abc.txt
+```
+
+* w : 변경점을 다른 파일에 저장
+```
+sed 's/baby/dady/w abc.txt' tem.txt
+```
+
+##### 여러 `sed` 명령어와 연속 연산자 (-e와 ; 스위치)
+* -e로 여러 명령 한번에 처리하기
+```
+sed -e 's/surendra/bca/' -e 's/mouni/mca/' -e '/s/baby/bba/' tem.txt
+```
+
+* ; (연속 연산자)로 더 짧게!
+```
+sed 's/Surendra/bca/;s/mouni/mca/;s/baby/bba/' tem.txt
+```
+
+##### 줄 번호 연산자 (,와 = 스위치)
+* 세번 째 줄 내용만 검색해서 치환하기
+```
+sed '3 s/Syrendra/bca/' tem.txt
+```
+
+* 1-4번 째 줄 내용만 검색해서 치환하기
+```
+sed '1,4 s/Syrendra/bca/' tem.txt
+```
+
+* 두 번째 줄부터 문서 끝까지 검색해서 치환하기
+```
+sed '2,$ s/Surendra/bca/' tem.txt
+```
+
+* 검색해서 치환 후 모든 줄에 줄 번호 넣기 (= 옵션)
+```
+sed = tem.txt
+```
+
+* 번호를 같은 줄에 넣기
+```
+sed = tem.txt | sed 'N;s/n/t/'
+```
+
+##### 검색 연산자 (/단어/)
+* 한 단어를 검색해서 걸린 줄에서 작업하기
+```
+sed '/surendra/ s/audi/xyz/' tem.txt
+```
+
+* 특정 범위의 줄 내에서 작업하기
+```
+sed '3,/Surendra/ s/audi/xyz/' tem.txt
+```
+
+* 찾은 단어가 있는 줄부터 문서 끝까지를 범위로 작업하기
+```
+sed '/Surendra/,$ s/audi/xyz/' tem.txt
+```
+
+##### 부정 연산자 (!)
+* w, p, d 옵션과 함께 사용
+* abc라는 단어가 없는 모든 출을 출력
+```
+sed -n '/abc/ !p` tem.txt
+```
+
+* surendra라는 단어가 있는 줄을 제외한 모든 줄을 삭제
+```
+sed '/surendra/ !d' tem.txt
+```
+
+* 1-3 줄만 제외하고 나머지 줄 삭제
+```
+sed '1,3 !d'
+```
+>>>>>>> cd8cceba6c14538f9bd08ba0b75f8013660b9c6d
 
