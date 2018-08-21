@@ -6,11 +6,11 @@
 * [공유 폴더 마운트](#share)
 * [파일 압축풀기](#decompress)
 * [프로그램 컴파일 & 설치](#install_program)
-* [line을 이용해보자](#awk)
+* [line을 이용해보자 (`awk`)](#awk)
 * [히스토리](#history)
-* [문자열 패턴 검색](#grep)
-* [정렬](#sort)
-* [스트림 에디터](#sed)
+* [문자열 패턴 검색 (`grep`)](#grep)
+* [정렬 (`sort`)](#sort)
+* [스트림 에디터 (`sed`)](#sed)
 * [`seq` 반복문](#seq)
 
 ## <a name="install_guest"></a>게스트 확장 이미지 설치
