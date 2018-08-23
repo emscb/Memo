@@ -184,12 +184,12 @@ sed 's/Surendra/bca/;s/mouni/mca/;s/baby/bba/' tem.txt
 ```
 
 ### 줄 번호 연산자 (,와 = 스위치)
-* 세번 째 줄 내용만 검색해서 치환하기
+* 세 번째 줄 내용만 검색해서 치환하기
 ```
 sed '3 s/Syrendra/bca/' tem.txt
 ```
 
-* 1-4번 째 줄 내용만 검색해서 치환하기
+* 1-4번째 줄 내용만 검색해서 치환하기
 ```
 sed '1,4 s/Syrendra/bca/' tem.txt
 ```
@@ -241,6 +241,7 @@ sed '/surendra/ !d' tem.txt
 ```
 sed '1,3 !d'
 ```
+
 ## <a name="seq"></a>`seq` 반복문
 * `-f` 옵션
     * %g : 정수
