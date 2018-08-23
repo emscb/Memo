@@ -86,7 +86,7 @@ A|A는 true
 A -a B|&&, A이고 B이면 true
 A -o B|\|\|, A이거나 B이면 true
 
-	* String 비교 시
+* String 비교 시
 
 연산자|의미
 :-:|-
@@ -95,7 +95,7 @@ A != B|A와 B가 다르면 true
 -n A|A가 not null이면 true
 -z A|A가 null이면 true
 
-	* Integer일 경우에만 가능한 연산자 (산술 비교 시)
+* Integer일 경우에만 가능한 연산자 (산술 비교 시)
 
 연산자|의미
 :-:|-
@@ -106,7 +106,7 @@ A -gt B|A>B
 A -le B|A<=B
 A -lt B|A<B
 
-	* 파일일 경우에 가능한 연산자
+* 파일일 경우에 가능한 연산자
 
 연산자|의미
 :-:|-
