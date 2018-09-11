@@ -1,4 +1,4 @@
-﻿## 목차
+## 목차
 * [게스트 확장 이미지 설치](#install_guest)
 * [작업 관리자](#job_control)
 * [파일이 들어있는 패키지 검색](#search_package)
