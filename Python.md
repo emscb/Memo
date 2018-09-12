@@ -11,3 +11,9 @@
 * `re.complie('표현식')` : 표현식을 만족하는 부분 찾기
 * `findall()` : `complie` 만족하는 부분들 list나 tuple로 반환
 
+### Sort
+* 그냥 sort는 쉽다. 그냥 앞에서 부터 오름차순 정렬이 기본.
+* `sort(key = ..., reverse = ...)`
+* key에는 뭘로 할지를 정해주면 된다.
+	* List of list를 할 때 : `sort(key = lambda row: row[1])`과 같은 형태로 기준을 잡아준다.
+> https://stackoverflow.com/questions/3398589/sorting-a-list-of-lists-in-python
