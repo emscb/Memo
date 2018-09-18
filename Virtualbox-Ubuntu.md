@@ -21,11 +21,12 @@
 숫자+G|특정 line으로 이동
 g|제일 위 (Home)
 G|제일 밑 (End)
-u|한 줄 위
-d|한 줄 밑
+u|한 줄 위 (up)
+d|한 줄 밑 (down)
 f|한 페이지 위 (forward)
 b|한 페이지 밑 (back)
 ^G|현재 페이지가 몇 번 line을 표시하는 지, 전체 라인도 표시
+set nowrap|auto-wraping을 끈다. 자동 줄바꿈 끄기
 
 ## <a name="install_guest"></a>게스트 확장 이미지 설치
 * `sudo apt-get install virtualbox-guest-additions-iso`
