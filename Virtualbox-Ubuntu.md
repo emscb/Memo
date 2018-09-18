@@ -15,14 +15,17 @@
 * [`seq` 반복문](#seq)
 
 ## <a name="less"></a>`less`
-* 숫자+G : 특정 line으로 이동
-* g : 제일 위 (home)
-* u : 한줄 위
-* d : 한줄 밑
-* f : forward 한 페이지 위
-* b : back 한 페이지 밑
-* G : 제일 밑 (End)
-* ^G : 현재 페이지가 몇 번 line을 표시하는 지, 전체 라인도 표시
+
+단축키|설명
+:-:|-
+숫자+G|특정 line으로 이동
+g|제일 위 (Home)
+G|제일 밑 (End)
+u|한 줄 위
+d|한 줄 밑
+f|한 페이지 위 (forward)
+b|한 페이지 밑 (back)
+^G|현재 페이지가 몇 번 line을 표시하는 지, 전체 라인도 표시
 
 ## <a name="install_guest"></a>게스트 확장 이미지 설치
 * `sudo apt-get install virtualbox-guest-additions-iso`
