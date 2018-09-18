@@ -146,7 +146,7 @@ sed 's/search_term/replace_term/' inputfile
 cat inputfile_name | sed 's/search_term/replace_term/'
 echo "This is test message" | sed 's/search_term/replace_term/'
 ```
-* 기본적으로 처음 찾은 단어만 치환해준다. 모든 단어를 치환하려면 g 스위치를 사용해야한다.
+* 기본적으로 처음 찾은 단어만 치환해준다. 모든 단어를 치환하려면 g 스위치를 사용해야한다. (global)
 ```
 echo "sheena leads, sheila needs" | sed 's/sh/le/g'
 ```
