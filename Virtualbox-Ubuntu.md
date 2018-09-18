@@ -1,4 +1,5 @@
 ## 목차
+* [`less`](#less)
 * [게스트 확장 이미지 설치](#install_guest)
 * [작업 관리자](#job_control)
 * [파일이 들어있는 패키지 검색](#search_package)
@@ -12,6 +13,16 @@
 * [정렬 (`sort`)](#sort)
 * [스트림 에디터 (`sed`)](#sed)
 * [`seq` 반복문](#seq)
+
+## <a name="less"></a>`less`
+* 숫자+G : 특정 line으로 이동
+* g : 제일 위 (home)
+* u : 한줄 위
+* d : 한줄 밑
+* f : forward 한 페이지 위
+* b : back 한 페이지 밑
+* G : 제일 밑 (End)
+* ^G : 현재 페이지가 몇 번 line을 표시하는 지, 전체 라인도 표시
 
 ## <a name="install_guest"></a>게스트 확장 이미지 설치
 * `sudo apt-get install virtualbox-guest-additions-iso`
