@@ -84,7 +84,7 @@ FILENAME|현재 처리중인 파일명
 FS|필드 구분자, 디폴트는 whitespace
 RS|레코드 구분자, 디폴트는 new line
 NF|현재 레코드의 필드 개수
-NR|하나의 레코드는 처리한 뒤 1이 증가하는 변수, line number를 의미
+NR|하나의 레코드를 처리한 뒤 1이 증가하는 변수, line number를 의미
 OFS|출력할 때 사용하는 FS
 ORS|출력할 때 사용하는 RS
 $0|입력 레코드 전체
