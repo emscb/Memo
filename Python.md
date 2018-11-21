@@ -33,3 +33,14 @@
 - `&` : 교집합
 - `|` : 합집합
 
+### GUI로 파일 선택 받기
+
+```python
+from tkinter import filedialog, Tk
+
+root = Tk()
+root.filename = filedialog.askopenfilename(initialdir="D:/강의 관련/'18년 2학기", title="Choose your file", filetypes=(("FASTA files","*.fasta"), ("all files","*.*")))
+print(root.filename)
+root.withdraw()
+```
+
