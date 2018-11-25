@@ -103,6 +103,7 @@ $n|입력 레코드의 n 번째 필드
 * 정규표현식 참고
 > http://unabated.tistory.com/entry/grep-sed-awk-%EC%A0%95%EA%B7%9C%EC%8B%9D
 * 터미널 내에서 탭 입력 시 : ^v탭
+* `length()` 메서드 사용 가능
 
 ## <a name="history"></a>히스토리
 
