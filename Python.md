@@ -44,3 +44,7 @@ print(root.filename)
 root.withdraw()
 ```
 
+### List item index
+
+- `list_name.index(item)`
+
