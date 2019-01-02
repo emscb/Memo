@@ -48,3 +48,7 @@ root.withdraw()
 
 - `list_name.index(item)`
 
+### 조건문
+
+- `"A" or "B"`는 A다.
+
