@@ -44,11 +44,23 @@ print(root.filename)
 root.withdraw()
 ```
 
-### List item index
-
-- `list_name.index(item)`
-
 ### 조건문
 
 - `"A" or "B"`는 A다.
+
+### List
+
+- 값 찾기
+  - `list.index(object)`
+- 곱하기로 리스트 만들기
+  - 행렬 만들기 : `[ [0] * N ] * M` (단, 이렇게 만들면 값 고칠 때 망함 ~~소프트 링크인 듯~~)
+  - 그러니까 `[ [0 for _ in range(N)] for _ in range(M) ]` 이렇게 만들자
+
+### 문자열
+
+- `[0:0]`은 `''`가 나옵니다.
+- `.find()` : 그 문자열을 찾아서 첫 번째 index 반환
+- `.replace(old_text, new_text, [max])` : 치환, `max`안주면 전부 다 바꿈
+
+
 
