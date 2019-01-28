@@ -20,7 +20,7 @@
 > `import re`
 
 - `re.complie('표현식')` : 표현식을 만족하는 부분 찾기
-- `findall()` : `complie` 만족하는 부분들 list나 tuple로 반환
+- `findall(pattern, string)` : `complie` 만족하는 부분들 list나 tuple로 반환
 
 ### Print
 
