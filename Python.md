@@ -20,6 +20,7 @@
 > `import re`
 
 - `re.complie('표현식')` : 표현식을 만족하는 부분 찾기
+- `sub(pattern, replace_str, string)` : 만족하는 부분들 치환
 - `findall(pattern, string)` : `complie` 만족하는 부분들 list나 tuple로 반환
 
 ### Print
@@ -32,6 +33,7 @@
 
 - `&` : 교집합
 - `|` : 합집합
+- 값 추가는 `add`로, 빼는건 `discard`로
 
 ### GUI로 파일 선택 받기
 
