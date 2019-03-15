@@ -64,5 +64,7 @@ root.withdraw()
 - `.find()` : 그 문자열을 찾아서 첫 번째 index 반환
 - `.replace(old_text, new_text, [max])` : 치환, `max`안주면 전부 다 바꿈
 
+### `map`
 
+- `a, b = map(int, input().strip().split(' '))`
 
