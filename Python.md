@@ -68,3 +68,7 @@ root.withdraw()
 
 - `a, b = map(int, input().strip().split(' '))`
 
+### Dict 복사
+
+- `dict1 = dict2.copy()`
+- 
