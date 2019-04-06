@@ -28,6 +28,27 @@ while(inFile >> r){
 }
 ```
 
+
+
+> `#include <string>`
+
+```c++
+#include <string>
+using namespace std;
+
+string s;
+char input[1000] = { 0 };
+
+getline(cin, s);
+if (s.empty()){
+    exit(0);
+}
+
+strcpy(input, s.c_str());
+```
+
+
+
 ### 예외처리
 
 - `if`를 사용하는 경우 : 예외 상황에서 `printf()`를 통해 알리고 `exit()`으로 나갈 수 있다. (짜기 나름)
