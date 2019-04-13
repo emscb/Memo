@@ -90,7 +90,71 @@ for(int i=0; i<5; i++){
   - `cin`에서는 효과 없고 파일 입력에서는 가능
 - `ss.str()` : 그냥 쓰면 내부 문자열 다 보여줌
 
+```c++
+#include <iostream>
+#include <sstream>
+
+std::string input = "abc,def,ghi";
+std::istringstream ss(input);
+std::string token;
+
+while(std::getline(ss, token, ',')) {
+    std::cout << token << '\n';
+}
+```
+
+
+
 ### 템플릿 클래스
 
 - **헤더 파일에 정의까지 다 쓰셔야 합니다.**
+- 특수화
+
+```c++
+template <class T>
+    class Stack{
+    public:
+        T pop(){
+            return data[top];
+        }
+    };
+
+template <> int Stack<int>::pop() {}
+```
+
+
+
+### CString, string 형변환
+
+- CString to string
+
+```c++
+CString strSrc("내용");
+std::string strDst;
+strDst = strSrc;
+```
+
+- string to CString
+  - `CString cs(s.c_str());`
+
+### String, char 형변환
+
+- string to char
+  - `strcpy(char*, string.c_str());`
+- char to string
+
+```c++
+char* ch1 = "Hello!";
+char ch2[] = "Hi!";
+
+string str1(ch1);
+string str2;
+str2 = ch2;
+```
+
+
+
+### End of string
+
+- `*(&inp.at(i)+1`
 - 

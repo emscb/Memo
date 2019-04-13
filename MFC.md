@@ -26,18 +26,3 @@ SetDlgItemText(IDC_에디트박스이름, strValue);
 
 - 
 
-### CString을 string으로
-
-```c++
-CString strSrc("내용");
-std::string strDst;
-strDst = strSrc;
-```
-
-### String, char 형변환
-
-- string to char
-  - `strcpy(char*, string.c_str());`
-- char to string
-  - `str(char);`
-
