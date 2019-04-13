@@ -67,5 +67,30 @@ strcpy(input, s.c_str());
 - `new`가 그냥 메모리에 공간을 잡고 그 첫 bit를 가리키는 포인터를 준다.
 - 포인터의 자료형은 끝점을 알기 위해 필요하다. (시작점은 안다.)
   - String에는 끝점을 모르니까 뒤에 `\0`를 붙여놓는다. (1byte 더 붙음)
-- 
 
+### 문자열 입출력
+
+> `#include <sstream>`
+
+```c++
+#include <sstream>
+#include <string>
+
+int n;
+stringstream ss;
+ss.str("12 345 6789");
+for(int i=0; i<5; i++){
+    ss >> n;
+    cout << n << endl;
+}
+```
+
+- `!ss.eof()` 사용 가능 (`iostream` 상속 받았기 때문)
+- `while (ss >> n)` 가능 (받을 게 없으면 0을 받는다. n이 받는 것이 아니고...)
+  - `cin`에서는 효과 없고 파일 입력에서는 가능
+- `ss.str()` : 그냥 쓰면 내부 문자열 다 보여줌
+
+### 템플릿 클래스
+
+- **헤더 파일에 정의까지 다 쓰셔야 합니다.**
+- 
