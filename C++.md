@@ -26,6 +26,8 @@ if (inFile.fail()){
 while(inFile >> r){
     printf("r : %d", r);
 }
+혹은
+while(getline(inFile, r, '\n')) { }
 ```
 
 
@@ -45,6 +47,23 @@ if (s.empty()){
 }
 
 strcpy(input, s.c_str());
+```
+
+### 파일 쓰기
+
+> `#include <fstream>`
+
+```c++
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+ofstream out("text.txt");
+
+if (out.is_open()){
+    out << "내용";
+}
 ```
 
 
@@ -136,6 +155,10 @@ strDst = strSrc;
 
 - string to CString
   - `CString cs(s.c_str());`
+- CString to int
+  - `int = _ttoi(CString);`
+- int to CString
+  - `CString.Format(_T("%d"), int);`
 
 ### String, char 형변환
 
@@ -154,7 +177,24 @@ str2 = ch2;
 
 
 
-### End of string
+### string
 
-- `*(&inp.at(i)+1`
+- End of string
+  - `*(&inp.at(i)+1`
+- string 붙이기
+  - `+=` 연산자 이용 or `append()`
+- `\r\n`이 순서로 써야 줄바꿈이 되더라~
+- 일부분만 보기
+  - `a.substr(시작위치, [개수]);`
+  - 
+
+
+
+### int, string 형변환
+
+- int to string
+  - `string str = to_string(intValue);`
+- string to int
+  - `int intValue = atoi(str.c_str());` (c++ 2008 이하)
+  - `int n = stoi(str);`
 - 
