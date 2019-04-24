@@ -186,9 +186,6 @@ str2 = ch2;
 - `\r\n`이 순서로 써야 줄바꿈이 되더라~
 - 일부분만 보기
   - `a.substr(시작위치, [개수]);`
-  - 
-
-
 
 ### int, string 형변환
 
@@ -197,22 +194,32 @@ str2 = ch2;
 - string to int
   - `int intValue = atoi(str.c_str());` (c++ 2008 이하)
   - `int n = stoi(str);`
-- 
 
 ### 포인터 배열의 초기화
 
 - 배열은 그냥 `{ 0 }` 이렇게 하면 되는데 포인터 배열은 안되네요
 - 그냥 `for`문으로 하나하나 NULL로...
-- 
 
 ### 배열 정렬
 
 - `sort()` 사용
   - `#include <algorithm>`
   - sort(시작지점, 끝나는지점+1) = sort(배열 포인터, 배열 포인터 + 배열 크기)
-- 
 
-### 길이!
+### 길이
 
 - `sizeof()`는 그 대상의 크기 (**byte**)지 길이가 아님!
+
+### 실행 시간 측정
+
+```c++
+#include <time.h>
+
+clock_t start, end;
+start = clock();
+end = clock();
+double result = (double)(end - start);
+```
+
+- `time()`으로 하면 초 단위 (`clock()`은 ms 단위)
 - 

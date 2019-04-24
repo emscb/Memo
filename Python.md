@@ -71,4 +71,13 @@ root.withdraw()
 ### Dict 복사
 
 - `dict1 = dict2.copy()`
-- 
+
+### 랜덤
+
+> `from random import *`
+
+- `randint(a,b)` : a, b 사이의 임의의 정수 (이상/이하)
+- `random()` : 0과 1 사이의 임의의 float
+- `uniform(a,b)` : a, b 사이의 임의의 float
+- `randrange(시작, 끝[, 간격])` : range의 범위 내에서의 임의의 정수
+
