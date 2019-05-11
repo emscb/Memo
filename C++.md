@@ -180,12 +180,14 @@ str2 = ch2;
 ### string
 
 - End of string
-  - `*(&inp.at(i)+1`
+  - `*(&inp.at(i)+1)`
 - string 붙이기
   - `+=` 연산자 이용 or `append()`
 - `\r\n`이 순서로 써야 줄바꿈이 되더라~
 - 일부분만 보기
   - `a.substr(시작위치, [개수]);`
+- 치환
+  - `a.replace(위치, 길이, 내용)`
 
 ### int, string 형변환
 
