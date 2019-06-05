@@ -81,3 +81,10 @@ root.withdraw()
 - `uniform(a,b)` : a, b 사이의 임의의 float
 - `randrange(시작, 끝[, 간격])` : range의 범위 내에서의 임의의 정수
 
+### `subprocess`
+
+> `import subprocess`
+
+- 셸 스크립트를 돌리자
+- `subprocess.check_output('셸 명령어', shell=True)` : 결과물이 string으로 반환
+- 
