@@ -20,6 +20,7 @@
 > `import re`
 
 - `re.complie('표현식')` : 표현식을 만족하는 부분 찾기
+- `search()` : 문자열 전체에서 정규식과 매치되는지 확인
 - `sub(pattern, replace_str, string)` : 만족하는 부분들 치환
 - `findall(pattern, string)` : `complie` 만족하는 부분들 list나 tuple로 반환
 
@@ -34,6 +35,8 @@
 - `&` : 교집합
 - `|` : 합집합
 - 값 추가는 `add`로, 빼는건 `discard`로
+- list를 set으로 바꿀 땐
+  - `T = set(T)`
 
 ### GUI로 파일 선택 받기
 
