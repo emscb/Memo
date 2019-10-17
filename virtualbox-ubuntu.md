@@ -1,3 +1,5 @@
+# Virtualbox-Ubuntu
+
 ## 게스트 확장 이미지 설치
 
 * `sudo apt-get install virtualbox-guest-additions-iso`
@@ -6,9 +8,7 @@
 
 * `sudo mkdir 공유할폴더`
 * `sudo mount -t vboxsf 호스트폴더이름 게스트폴더이름`
-
   * `sudo mount -t vboxsf ushare ./ushare`
-
   * mount할 때 마지막에
 
     `호스트의공유이름 마운트할위치`
