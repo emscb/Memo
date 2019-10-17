@@ -1,4 +1,6 @@
-# Edit control
+# MFC
+
+## Edit control
 
 * 입력창 안에서 여러 라인을 입력하는 경우
   * 속성

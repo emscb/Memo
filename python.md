@@ -93,4 +93,4 @@ root.withdraw()
 
 * 셸 스크립트를 돌리자
 * `subprocess.check_output('셸 명령어', shell=True)` : 결과물이 string으로 반환
-* 
+

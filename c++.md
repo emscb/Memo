@@ -216,4 +216,25 @@ double result = (double)(end - start);
 ```
 
 * `time()`으로 하면 초 단위 \(`clock()`은 ms 단위\)
-* 
+
+## 포인터
+
+```cpp
+int* cal();
+
+void main() {
+    int* b = cal();
+    printf("%d", *b);
+    free(b);
+}
+
+int* cal() {
+    int c[] = { 1,4,6 };
+    int* k = (int*)malloc(sizeof(int) * 3);
+    for (int i = 0; i < 3; i++) {
+        k[i] = c[i];
+    }
+    return k;
+}
+```
+
