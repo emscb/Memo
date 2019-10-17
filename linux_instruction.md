@@ -20,24 +20,24 @@
   * `dos2unix`
   * Redirection
   * 파일 내용 편집
-    * [vi editor](undefined-2.md#vi)
+    * [vi editor](linux_instruction.md#vi)
 * 출력
   * `cat`
-  * [`less`](undefined-2.md#less)
+  * [`less`](linux_instruction.md#less)
   * `head` / `tail`
   * `find`
-  * [문자열 패턴 검색 \(`grep`\)](undefined-2.md#grep)
+  * [문자열 패턴 검색 \(`grep`\)](linux_instruction.md#grep)
   * 정렬 \(`sort`\)
-  * [`awk`](undefined-2.md#awk)
+  * [`awk`](linux_instruction.md#awk)
   * `comm` / `cut`
   * `seq`
-  * [스트림 에디터 \(`sed`\)](undefined-2.md#sed)
+  * [스트림 에디터 \(`sed`\)](linux_instruction.md#sed)
 * 기타
   * `wget`
   * `export`
   * 파일이 들어있는 패키지 검색
   * 패키지 업데이트
-  * [작업 관리자](undefined-2.md#job_control)
+  * [작업 관리자](linux_instruction.md#job_control)
   * 히스토리
 
 ## 기본 명령
