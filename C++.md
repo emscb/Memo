@@ -2,7 +2,7 @@
 
 #### 입력 받기
 
-```c++
+```
 int main(int argc, char **argv) { ... }
 ```
 
