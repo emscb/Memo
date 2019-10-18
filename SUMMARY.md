@@ -11,6 +11,7 @@
 * [Perl](perl.md)
 * [PowerShell](powershell.md)
 * [Python](python.md)
+* [R](r.md)
 * [ShellScript](shellscript.md)
 * [Virtualbox-Ubuntu](virtualbox-ubuntu.md)
 
