@@ -1,6 +1,6 @@
 # PowerShell
 
-\* 백그라운드 잡
+## 백그라운드 잡
 
 * 실행 : `Start-Job -ScriptBlock {스크립트} -Name 잡이름`
 * 목록 : `Get-Job`
