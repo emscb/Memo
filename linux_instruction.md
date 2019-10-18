@@ -284,7 +284,7 @@
 
 #### `awk`
 
-* Line단위로 실행, \t 이외의 whitespace도 field separator로 사용 가능
+* Line 단위로 실행, \t 이외의 whitespace도 field separator로 사용 가능
 * 기본 틀
 
 > `awk 'pattern {action}' filename`
