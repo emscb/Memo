@@ -91,8 +91,8 @@
 
 ## 반환값
 
-* 명시적으로 return\(\)을 주게되면 함수 호출하는 시간이 더 걸리게 된다.
-* 보통은 명시적으로 표시 해주는게 맞지만 성능적 측면에서 생략할 수 있다.
+* 명시적으로 `return()`을 주게되면 함수 호출하는 시간이 더 걸리게 된다.
+* 보통은 명시적으로 표시해주는게 맞지만 성능적 측면에서 생략할 수 있다.
 * 함수만 정의하고 아무값도 \(return은 물론 결과값조차\) 입력하지 않으면 반환값이 없다.
 
 ## 함수도 객체다
@@ -183,15 +183,15 @@ w : num 12
 
 ### 팩터에 사용되는 일반적인 함수
 
-* tapply\(x,f,함수\)로 팩터에 함수 적용
-* split\(x,y\)는 y별 데이터를 리스트 형식으로 출력
-* by\(data,f,함수\(data\_col\)\) : 팩터별 함수 결과 출력
+* `tapply(x,f,함수)`로 팩터에 함수 적용
+* `split(x,y)`는 y별 데이터를 리스트 형식으로 출력
+* `by(data,f,함수(data_col))` : 팩터별 함수 결과 출력
 
 ### 테이블 사용하기
 
-* table\(팩터/리스트\) 함수로 테이블 분할표 생성
+* `table(팩터/리스트)` 함수로 테이블 분할표 생성
 
-```text
+```r
 # 지지 정당별 나이 분포
 > affils <- c("R","D","D","R","U","D")
 
@@ -225,7 +225,7 @@ L1.1 21 25 26 37 42 55
 * 테이블로 행렬, 배열 연산하기
   * 행렬의 방식으로 테이블 셀에 접근할 수 있다.
 
-```text
+```r
 > t
     L1.2
 L1.1 21 25 26 37 42 55
@@ -271,10 +271,10 @@ $L1.2
 
 ### 그 밖의 팩터 및 테이블 관련 함수
 
-* aggregate\(x,y,함수\) : y 그룹별 x 데이터의 함수 결과 출력, y는 반드시 리스트여야 한다.
-* cut\(a,b\) : a의 원소가 b의 어느 집합에 속하는지 알려준다.
+* `aggregate(x,y,함수)` : y 그룹별 x 데이터의 함수 결과 출력, y는 반드시 리스트여야 한다.
+* `cut(a,b)` : a의 원소가 b의 어느 집합에 속하는지 알려준다.
 
-```text
+```r
 # a의 3,5,7,9가 어느 b 집합(1초과~5이하, 5초과~10이하)에 속하는가?
 > a <- c(3,5,7,9)
 
@@ -295,7 +295,7 @@ Levels: (1,5] (5,10]
 * `scan()` 함수 사용하기
 * 파일에서 읽기
 
-```text
+```r
 > scan("c:/test/z1.txt")
 Read 4 items
 [1] 123 4 5 6
@@ -319,7 +319,7 @@ Read 4 items
 
 * 키보드로부터 입력 받기
 
-```text
+```r
 > v1 <- scan()
 1: 1 2 3
 4: 4
@@ -342,7 +342,7 @@ Read 3 items
 * `readline()` 함수
   * 키보드에서 한 줄 읽기
 
-```text
+```r
 > w <- readline()
 abc de f
 
@@ -361,7 +361,7 @@ abc de f
   * `print()` 함수
   * `cat()` 함수
 
-```text
+```r
 > cat("abc\n") # 줄 바꿈 문자(\n)를 써줘야 한다.
 abc
 
@@ -383,7 +383,7 @@ abc
 
 * 파일에서 데이터 프레임이나 행렬 읽어오기
 
-```text
+```r
 # read.table() : 데이터 프레임 읽기
 > z5 <- read.table("c:/test/z5.txt",header=TRUE)
 
@@ -411,7 +411,7 @@ Read 9 items
 * 텍스트 파일 일기
   * `readLines()`로 한 번에 읽기
 
-```text
+```r
 > z1 <- readLines("c:/test/z1.txt")
 
 > z1
@@ -420,7 +420,7 @@ Read 9 items
 
 * 커넥션 입문
 
-```text
+```r
 # 줄 단위로 읽기
 > c <- file("c:/test/z1.txt","r")
 
@@ -466,7 +466,7 @@ character(0)
 
 * URL을 통해 원격으로 파일에 접속하기
 
-```text
+```r
 # read.csv 사용
 > uci <- "http://archive.ics.uci.edu/ml/machine-learning-databases/"
 
@@ -476,10 +476,9 @@ character(0)
 ```
 
 * 파일에 쓰기
+  * `write.table()` 사
 
-> `wirte.table()` 사용
-
-```text
+```r
 > kids <- c("Jack","Jill")
 
 > ages <- c(12,10)
@@ -501,9 +500,9 @@ character(0)
 > write.table(d,"c:/test/kds3.txt",quote=FALSE,row.names=FALSE,col.names=FALSE)
 ```
 
-> `cat()` 사용
+* `cat()` 사
 
-```text
+```r
 # c1.txt 파일에 쓰기
 > cat("abc\n",file="c:/test/c1.txt")
 
@@ -511,9 +510,9 @@ character(0)
 > cat("de\n",file="c:/test/c1.txt",append=TRUE)
 ```
 
-> `writeLines()` 사용
+* `writeLines()` 사
 
-```text
+```r
 # w1.txt 파일에 쓰기
 > c <- file("c:/test/w1.txt","w")
 
