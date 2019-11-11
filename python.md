@@ -3,7 +3,6 @@
 ## Sorting
 
 * `sorted(list)` : list 내부 값들을 오름차순으로 정렬, list외에도 사용 가능
-* `list.sort()` : 위와 같은 결과, 원래 list에 덮어씀, list만 사용 가능
 * 두 가지 모두 key parameter를 줄 수 있다.
   * `str.lower` : 알파벳순으로 오름차순 정렬
   * `lambda x:___` 사용 가능 : 집합들 내부의 값을 통해 정렬, 조건을 줄 수 있음
@@ -11,12 +10,11 @@
 
 ## Sort
 
-* 그냥 sort는 쉽다. 그냥 앞에서 부터 오름차순 정렬이 기본.
+* 그냥 sort는 쉽다. 그냥 앞에서 부터 오름차순 정렬이 기본
 * `sort(key = ..., reverse = ...)`
 * key에는 뭘로 할지를 정해주면 된다.
-  * List of list를 할 때 : `sort(key = lambda row: row[1])`과 같은 형태로 기준을 잡아준다.
+  * List of list를 할 때 : `sort(key = lambda row: row[1])`과 같은 형태로 기준을 잡아준다. ([참고](https://stackoverflow.com/questions/3398589/sorting-a-list-of-lists-in-python))
 
-    > [https://stackoverflow.com/questions/3398589/sorting-a-list-of-lists-in-python](https://stackoverflow.com/questions/3398589/sorting-a-list-of-lists-in-python)
 
 ## Regular Expression
 
@@ -114,30 +112,38 @@ root.withdraw()
 ## 조건문
 
 * `"A" or "B"`는 A다.
+* 삼항연산자 : `if is_float float(a) else int(a)`
 
 ## List
 
-* 값 찾기
-  * `list.index(object)`
 * 곱하기로 리스트 만들기
   * 행렬 만들기 : `[ [0] * N ] * M` \(단, 이렇게 만들면 값 고칠 때 망함 ~~소프트 링크인 듯~~\)
   * 그러니까 `[ [0 for _ in range(N)] for _ in range(M) ]` 이렇게 만들자
+* `pop(index)` : `index`값을 안 주면 마지막 원소가 빠져나감
+* `insert(index, value)` : 특정 위치에 값을 끼워넣는다.
+* `remove(value)` : 첫 번째로 나오는 `value`를 삭제 (앞에서부터 탐색)
+* `count(value)` : `value`가 리스트에 몇 개 있는지
+* `index(value)` : `value`가 리스트에 어디 있는지 index 반환
+* `reverse()` : 그대로 역순으로 뒤집음
+* `sort()` : 리스트를 오름차순으로 정렬 (원래 리스트에 덮어씀)
 
 ## 문자열
 
 * `[0:0]`은 `''`가 나옵니다.
-* `.find()` : 그 문자열을 찾아서 첫 번째 index 반환
-* `.replace(old_text, new_text, [max])` : 치환, `max`안주면 전부 다 바꿈
+* `find()` : 그 문자열을 찾아서 첫 번째 index 반환
+* `replace(old_text, new_text, [max])` : 치환, `max`안주면 전부 다 바꿈
+* 문자열 중 한 문자만 인덱스로 바꿀 수 없다. (`A[2] = 'c'` 불가)
+* `print(,)` : 콤마로 구분하면 자동으로 띄어쓰기 한 칸 넣고 그냥 출력해줌 (정수라도)
 
 ## `map`
 
 * `a, b = map(int, input().strip().split(' '))`
 
-## Dict 복사
+## Dictionary
 
 * `dict1 = dict2.copy()`
 
-## 랜덤
+## 무작위
 
 > `from random import *`
 
