@@ -134,6 +134,7 @@ root.withdraw()
 * `replace(old_text, new_text, [max])` : 치환, `max`안주면 전부 다 바꿈
 * 문자열 중 한 문자만 인덱스로 바꿀 수 없다. (`A[2] = 'c'` 불가)
 * `print(,)` : 콤마로 구분하면 자동으로 띄어쓰기 한 칸 넣고 그냥 출력해줌 (정수라도)
+* `startswith(str, beg=0, end=len(string))` : 해당 문자열로 시작하는지
 
 ## `map`
 
