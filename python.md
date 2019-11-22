@@ -152,6 +152,8 @@ root.withdraw()
 * `random()` : 0과 1 사이의 임의의 float
 * `uniform(a,b)` : a, b 사이의 임의의 float
 * `randrange(시작, 끝[, 간격])` : range의 범위 내에서의 임의의 정수
+* 범위 내에서 여러 개 뽑기
+  * `sample(range(1,500), 5)`
 
 ## `subprocess`
 
