@@ -85,3 +85,8 @@
   * NULL : 하드 링크 생성
   * `-s` : 심볼릭 링크 생성
 
+## Alias
+
+- `~/.bashrc` : 로그인한 계정의 셸에 대한 기본 설정을 선언해두는 곳
+  - 모든 사용자에게 적용하려면 `/etc/profile` 혹은 `/etc/rc.local`과 같은 곳에 해야 함
+- `alias ll='ls -l'`과 같이 적어두고 `source ~/.bashrc`
