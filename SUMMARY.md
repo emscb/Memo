@@ -13,6 +13,5 @@
 * [Python](python.md)
 * [R](r.md)
 * [ShellScript](shellscript.md)
-* [SQL](sql.md)
 * [Virtualbox-Ubuntu](virtualbox-ubuntu.md)
 
