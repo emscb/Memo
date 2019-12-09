@@ -90,3 +90,13 @@
 - `~/.bashrc` : 로그인한 계정의 셸에 대한 기본 설정을 선언해두는 곳
   - 모든 사용자에게 적용하려면 `/etc/profile` 혹은 `/etc/rc.local`과 같은 곳에 해야 함
 - `alias ll='ls -l'`과 같이 적어두고 `source ~/.bashrc`
+
+## Git 인증
+
+- Git 계정 설정에서 SSH key 만들기
+- 미리 리눅스에서 key 만들기
+  - `ssh-keygen -t rsa`
+  - 공개키 내용을 페이지에 붙여넣기
+- GIt repo 페이지에서 "Clone or Download"에서 "Use SSH" 클릭
+- Git local project 폴더에서 `git remote set-url origin 복사한_링크`
+

@@ -126,6 +126,7 @@ root.withdraw()
 * `index(value)` : `value`가 리스트에 어디 있는지 index 반환
 * `reverse()` : 그대로 역순으로 뒤집음
 * `sort()` : 리스트를 오름차순으로 정렬 (원래 리스트에 덮어씀)
+* 최빈값 구하기 : `max(list, key=list.count)`
 
 ## 문자열
 
@@ -161,4 +162,12 @@ root.withdraw()
 
 * 셸 스크립트를 돌리자
 * `subprocess.check_output('셸 명령어', shell=True)` : 결과물이 string으로 반환
+* `subprocess.call()`
+
+## Math
+
+### 오일러 상수 (`e`)
+
+- $e^x$ : `from math import exp`, `exp(x)`
+- $lnx$ : `import numpy`, `numpy.log()` (`log10()`는 상용로그)
 

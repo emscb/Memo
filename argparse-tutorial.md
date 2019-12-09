@@ -4,7 +4,7 @@
 
 ## 시작하기에 앞서...
 
-```text
+```shell
 $ ls
 cpython  devguide  prog.py  pypy  rm-unused-function.patch
 $ ls pypy

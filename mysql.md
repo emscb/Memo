@@ -232,3 +232,10 @@ DELIMITER ;
 * 지우기
   * `DROP PROCEDURE procedure_name`
 
+## 날짜
+
+> sqlite3
+
+- `datetime()` : 날짜 포맷으로 바꿔줌
+- `julianday()` : 일 단위의 float으로 바꿔줌
+
