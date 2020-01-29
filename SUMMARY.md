@@ -15,7 +15,3 @@
 * [ShellScript](shellscript.md)
 * [Virtualbox-Ubuntu](virtualbox-ubuntu.md)
 
----
-
-- [임시](temp.md)
-
