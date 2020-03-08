@@ -13,3 +13,7 @@
 |rowspan|세로로 이웃한 셀 합치기|
 |caption|표 제목|
 
+## 기타
+
+- 창이 열리고 실행될 `<script>` 내용은 `window.onload` 뒤에 함수로
+
