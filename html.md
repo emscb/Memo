@@ -6,7 +6,7 @@
 |:-:|:-:|
 |table|표|
 |tr|행|
-|th|열 제목|
+|th|제목 (기본 bold, align center)|
 |td|내용|
 |thead, tbody, tfoot|열의 의미에 따라 구분 가능|
 |colspan|가로로 이웃한 셀 합치기|
