@@ -177,5 +177,5 @@ var re = /ab+c/;
     - `<h1 stype={{backgroundColor: "lightblue"}}></h1>`
 
 - EUC-KR이 깨져보일 때
-    - `iconv-lite`로 UTF-8으로 디코딩
+    - `iconv-lite`로 UTF-8으로 디코딩 (잘 안 된다)
 - 
