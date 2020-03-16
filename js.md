@@ -171,6 +171,33 @@ var re = /ab+c/;
 - `==`, `!=` : 자료형이 달라도 같아지도록 변환한 후 비교
 - `===`, `!==` : 걍 비교
 
+## 시간
+
+### 생성자
+
+- `new Date()` : 인수가 없다면 현재 날짜와 시간을 가진 인스턴스 반환
+    - `new` 연산자 없이 호출하면 인스턴스를 반환하지 않고 결과값을 문자열로 반환
+- `new Date(dateString)` : `Date.parse` 메소드에 의해 해석 가능한 형식의 문자열을 전달하면 인스턴스 반환
+- `new Date(year, month[, day, hour, minute, second, millisecond])` : 년, 월은 반드시 줘야 한다. 나머지는 0 또는 1로 초기화
+    - `year` : 1900년 이후의 년
+    - `month` : 0~11까지의 정수 (0 : 1월)
+    - `day` : 1~31까지의 정수
+    - `hour` : 0~23까지의 정수
+    - `minute` : 0~59까지의 정수
+    - `second` : 0~59까지의 정수
+    - `millisecond` : 0~999까지의 정수
+
+### 메소드
+
+- `Date.now` : 1970년 1월 1일 00:00:00 (UTC) 기준으로 현재 시간까지 경과한 밀리초를 숫자로 반환
+- `Date.parse` : 주어진 형식의 날짜까지 경과된 시간을 숫자로 반환
+- `Date.getFullYear` : 년도를 나타내는 4자리 숫자 반환
+- `Date.setFullYear` : 년도 설정. 월, 일도 가능
+    - `get/setMonth, Date, Day, Hours, Minutes, Seconds, Milliseconds, Time` 가능
+- `Date.toDateString` : 문자열로 날짜를 반환 (년월일 시분초)
+    - `toString` : 년월일만 반환
+- 
+
 ## 기타
 
 - JS에서 inline style prop을 줄 때 두 어절 이상이면 camelCase로 준다.
