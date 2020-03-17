@@ -41,3 +41,19 @@
     * `<H2>Text</H3>` : 불일치
     * `<H3>Text</H3>` : 일치
 
+## Lookaround
+
+- `?:` : Match expression but do not capture it.
+    - `a(b)`에서는 `ab`, `abc`가 매치되고 `b`라는 capture group을 만든다.
+    - `a(?:b)`에서는 `a`만 매치되고 끝
+- Lookahead
+    - `?=` : Match a suffix but exclude it from capture.
+        - `q(?=u)` : 뒤에 `u`가 있는 `q`만 매치
+    - `?!` : Match if suffix is absent.
+        - `q(?!u)` : 뒤에 `u`가 아닌 `q`만 매치
+- Lookbehind
+    - `?<=` : 앞에 뭐가 있는지 체크
+        - `(?<=a)b` : `b`만 매치 (`cab`에서의 `b`)
+    - `?<!` : 앞에 뭐가 없는지 체크
+- 단어의 경계에서 ahead나 behind가 success 할 수 있으니 주의
+- 

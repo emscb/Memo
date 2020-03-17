@@ -196,7 +196,6 @@ var re = /ab+c/;
     - `get/setMonth, Date, Day, Hours, Minutes, Seconds, Milliseconds, Time` 가능
 - `Date.toDateString` : 문자열로 날짜를 반환 (년월일 시분초)
     - `toString` : 년월일만 반환
-- 
 
 ## 기타
 
@@ -205,4 +204,4 @@ var re = /ab+c/;
 
 - EUC-KR이 깨져보일 때
     - `iconv-lite`로 UTF-8으로 디코딩 (잘 안 된다)
-- 
+- `toLocaleString()` : 세 자리 단위로 콤마 찍기
