@@ -40,6 +40,12 @@ function Example() {
 - 첫 번째 파라미터에는 생성하고 싶은 함수를 넣고, 두 번째 파라미터에는 배열을 넣는다. 이 배열에는 어떤 값이 바뀌었을 때 함수를 새로 생성해야 하는지 명시한다.
 - 함수 내부에서 상태 값에 의존해야 하는 경우 그 값을 반드시 두 번째 파라미터 안에 포함시켜야 한다.
 
+## useContext
+
+- Context를 사용하자
+- `createContext`로 context를 만드는 것까지는 같고
+    - `const {state} = useContext(Context_name)`으로 활용
+
 ## 기타
 
 - 단순히 하위에 들어오는 컴포넌트가 `children`

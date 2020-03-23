@@ -16,4 +16,6 @@
 ## 기타
 
 - 창이 열리고 실행될 `<script>` 내용은 `window.onload` 뒤에 함수로
+- 마우스 우클릭 이벤트는 `onContextMenu`
+    - `e.preventDefault()`로 원래 브라우져 메뉴가 나오는 걸 무시
 - 
