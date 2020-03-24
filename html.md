@@ -13,6 +13,8 @@
 |rowspan|세로로 이웃한 셀 합치기|
 |caption|표 제목|
 
+- td 안에서 `<td colspan=4>` 이렇게 4칸을 가로로 합친다.
+
 ## 기타
 
 - 창이 열리고 실행될 `<script>` 내용은 `window.onload` 뒤에 함수로
