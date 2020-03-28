@@ -133,6 +133,8 @@ var obj = {
     - 객채 간의 "value equality"를 보기 위해서는 반복문을 이용해 각 key별로 value들을 비교할 수 밖에 없다.
 - `Object.keys(이름)`으로 key들을 배열로 반환 가능
 - `Object.assign(target, source)` : 배열 합치기 (`target`에다가 덮어씀)
+    - State를 합치는 건 어렵다 (특히 비동기 처리되는 친구들)
+    - 그냥 결과값들을 합쳐서 넘겨주자
 
 ### 정규식 리터럴
 
