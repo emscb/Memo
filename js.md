@@ -132,6 +132,7 @@ var obj = {
     - 보통 값들을 비교하는 것과 달리 배열이나 날짜, 객체를 비교할 때는 reference로 비교한다. 이 때는 reference들이 가리키는 메모리가 같아야 "같다"고 한다.
     - 객채 간의 "value equality"를 보기 위해서는 반복문을 이용해 각 key별로 value들을 비교할 수 밖에 없다.
 - `Object.keys(이름)`으로 key들을 배열로 반환 가능
+- `Object.assign(target, source)` : 배열 합치기 (`target`에다가 덮어씀)
 
 ### 정규식 리터럴
 
