@@ -57,7 +57,7 @@
 - `parseInt()` : 오직 정수만 반환
     - 잘 사용하기 위해서는 항상 진법(Radix) 매개변수를 포함해야 한다.
 - `parseFloat()`
-- 간단한 방법은 `+`(단한 더하기 연산자)로 바꾸면 된다.
+- 간단한 방법은 `+`(단항 더하기 연산자)로 바꾸면 된다.
     - e.g., `+"1.1" + +"1.1" = 2.2`
 
 ## 리터럴
@@ -67,7 +67,7 @@
 
 ### 배열 리터럴
 
-- 0개 이상의 식 목록(list)
+- 0개 이상의 식 목록 (list)
 - `var fish = new Array();` : 선언만 가능, 선언하면서 초기화 가능
 - 추가 쉼표
     - e.g., `var fish = ["Lion", , "Angel"];`
@@ -156,7 +156,7 @@ var re = /ab+c/;
 | \0   | Null byte                   |
 | \b   | Backspace                   |
 | \f   | Form feed                   |
-| \n   | New  line                   |
+| \n   | New line                    |
 | \r   | Carriage return             |
 | \t   | Tab                         |
 | \v   | Vertical tab                |
