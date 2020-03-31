@@ -46,6 +46,22 @@ function Example() {
 - `createContext`로 context를 만드는 것까지는 같고
     - `const {state} = useContext(Context_name)`으로 활용
 
+## Redux 관련 hook
+
+### useSelector
+
+- 리덕스의 상태를 조회하는 데 사용
+- `const 결과 = useSelector(상태 선택 함수)`
+    - `const number = useSelector(state => state.counter.number)`
+
+### useDispatch
+
+- 스토어의 내장 함수 `dispatch`를 사용할 수 있게 해준다.
+- `const dispatch = useDispatch()`
+    - `dispatch({type: 'SAMPLE'})`
+- 컴포넌트가 리렌더링될 때마다 함수를 새롭게 만든다.
+    - `useCallback` 사용을 습관화하는 게 좋겠다.
+
 ## 기타
 
 - 단순히 하위에 들어오는 컴포넌트가 `children`
