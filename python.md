@@ -94,6 +94,7 @@
 
 * `&` : 교집합
 * `|` : 합집합
+* `-` : 차집합
 * 값 추가는 `add`로, 빼는건 `discard`로
 * list를 set으로 바꿀 땐
   * `T = set(T)`
@@ -126,7 +127,9 @@ root.withdraw()
 * `index(value)` : `value`가 리스트에 어디 있는지 index 반환
 * `reverse()` : 그대로 역순으로 뒤집음
 * `sort()` : 리스트를 오름차순으로 정렬 (원래 리스트에 덮어씀)
+* `list2 = list1.copy()` : 얘도 포인터라 이렇게 해야 하나 봅니다.
 * 최빈값 구하기 : `max(list, key=list.count)`
+* 내부 값들을 한 번에 정수로 : `Ns = [int(x) for x in Ns]`
 
 ## 문자열
 
@@ -144,6 +147,7 @@ root.withdraw()
 ## Dictionary
 
 * `dict1 = dict2.copy()`
+* Item 지우기 : `del dict[key]`
 
 ## 무작위
 
