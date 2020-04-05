@@ -7,7 +7,7 @@
 | \d | 0-9 |
 | \D | 0-9를 제외한 나머지 |
 | . | 아무거나 |
-| \. | Dot, Period |
+| \\. | Dot, Period |
 | \[abc\] | Only a, b or c |
 | \[^abc\] | Not a, b nor c |
 | \[a-z\] | a-z |
