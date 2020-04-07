@@ -61,6 +61,10 @@ function Example() {
     - `dispatch({type: 'SAMPLE'})`
 - 컴포넌트가 리렌더링될 때마다 함수를 새롭게 만든다.
     - `useCallback` 사용을 습관화하는 게 좋겠다.
+- `connect` 함수와의 차이점
+    - `connect` 함수를 사용했을 때는 부모 컴포넌트가 리렌더링될 때 해당 컨테이너 컴포넌트의 props가 바뀌지 않았다면 리렌더링이 자동으로 방지된다.
+    - `useSelector`로 리덕스 상태를 조회했을 때는 최적화 작업이 자동으로 이뤄지지 않아 `React.memo`를 컨테이너 컴포넌트에 사용해야 한다.
+        - `React.memo(컨테이너_컴포넌트)`
 
 ## 기타
 
