@@ -199,6 +199,7 @@ var re = /ab+c/;
 - `Date.getFullYear` : 년도를 나타내는 4자리 숫자 반환
 - `Date.setFullYear` : 년도 설정. 월, 일도 가능
     - `get/setMonth, Date, Day, Hours, Minutes, Seconds, Milliseconds, Time` 가능
+    - Date가 날짜, day가 요일 (월요일 : 1)
 - `Date.toDateString` : 문자열로 날짜를 반환 (년월일 시분초)
     - `toString` : 년월일만 반환
 
