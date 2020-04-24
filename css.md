@@ -115,4 +115,6 @@ Container는 item들을 담고 있는 그릇이다.
 - 같은 속성을 여러 번 정의하면 나중에 설정한 값이 적용되지만, 속성값 뒤에 `!important`를 쓰면 나중에 설정한 값이 적용되지 않는다.
 - 배경을 투명하게
     - `opacity`값을 주거나 `rgba(xxx,xxx,xxx,0.5)` 이런 식으로
+- 보통 `width`에는 `padding`값이 포함되지 않는다.
+- Root `font-size`가 16px이라면 1rem = 16px이다.
 - 
