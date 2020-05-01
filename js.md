@@ -202,6 +202,8 @@ var re = /ab+c/;
     - Date가 날짜, day가 요일 (월요일 : 1)
 - `Date.toDateString` : 문자열로 날짜를 반환 (년월일 시분초)
     - `toString` : 년월일만 반환
+- `Date.getDate()`에다가 연산을 하는게 좋다. (월이 알아서 바뀜)
+- Date에서 뒤에 `T`는 time part가 여기부터라는 것을 의미하고, `Z`는 `+00:00`의 약자이다. (UTC) Zulu라고 읽음
 
 ## 기타
 
