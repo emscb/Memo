@@ -11,6 +11,7 @@
 * [JavaScript](js.md)
 * [MFC](mfc.md)
 * [MySQL](mysql.md)
+* [NoSQL](nosql.md)
 * [Perl](perl.md)
 * [PowerShell](powershell.md)
 * [Python](python.md)
