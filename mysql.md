@@ -204,6 +204,12 @@ ALTER TABLE 테이블명 DROP 필드명
 ALTER TABLE 테이블명 MODIFY COLUMN 필드명 필드타입
 ```
 
+### 데이터 수정
+
+```sql
+UPDATE 테이블명 SET 필드명=값 WHERE 변경 조건
+```
+
 ## Null 대체
 
 * `IFNULL(column_name, 대체값)`
