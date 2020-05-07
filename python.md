@@ -154,6 +154,8 @@ root.withdraw()
 
 * `dict1 = dict2.copy()`
 * Item 지우기 : `del dict[key]`
+* JSON으로 바꾸기 : `json.dumps(dict)` (`import json`)
+    * 반대로는 `json.loads(json)`
 
 ## 무작위
 

@@ -136,6 +136,7 @@ var obj = {
 - `Object.assign(target, source)` : 배열 합치기 (`target`에다가 덮어씀)
     - State를 합치는 건 어렵다 (특히 비동기 처리되는 친구들)
     - 그냥 결과값들을 합쳐서 넘겨주자
+- JSON 문자열 to object : `JSON.parse(json)` (반대로는 `stringify()`)
 
 ### 정규식 리터럴
 

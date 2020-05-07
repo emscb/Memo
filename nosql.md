@@ -41,3 +41,11 @@ upsert|조건을 만족하는 document가 없다면 새로운 document를 추가
 multi|여러 개의 document를 수정 (default : false)
 writeConcern|업데이트할 때 필요한 설정값
 
+## Delete
+
+- 여러 document 삭제 : `deleteMany({조건})`
+
+## 기타
+
+- String to date : `Date(string)`
+- 
