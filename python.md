@@ -79,7 +79,7 @@
 1. re.DEBUG : 디버깅 정보를 보여줌
 2. re.IGNORECASE \(=re.l\) : 대소문자를 구분하지 않고 정규 표현식을 일치시킨다. e.g., \[A-Z\]라고 해도 \[A-Za-z\]의 효과를 낸다.
 3. re.LOCALE \(=re.L\) : `\w\W`, `\b\B`, `\s\S`가 현재 로케일에 종속적으로 바뀐다. \(?\)
-4. re.MULTILINE \(=re.M\) : 다중행 모드로 설정, 정규 표현식을 `(?m)`으로 시작하는 것과 동일한 효과
+4. re.MULTILINE \(=re.M\) : 다중행 모드로 설정, 정규  표현식을 `(?m)`으로 시작하는 것과 동일한 효과
 5. re.DOTALL \(=re.S\) : `.`이 `\n`까지 포함해 일치시킨다.
 6. re.UNICODE \(=re.U\) : `\w\W`, `\b\B`, `\s\S`가 유니코드 캐릭터 속성에 종속적으로 바뀐다. \(?\)
 7. re.VERBOSE \(=re.X\) : 정규 표현식의 공백을 무시한다. 단, 메타 문자는 예외
@@ -135,6 +135,7 @@ root.withdraw()
 * `list2 = list1.copy()` : 얘도 포인터라 이렇게 해야 하나 봅니다.
 * 최빈값 구하기 : `max(list, key=list.count)`
 * 내부 값들을 한 번에 정수로 : `Ns = [int(x) for x in Ns]`
+* Flat list : `ex_list = [item for sublist in ex_list for item in sublist]`
 
 ## 문자열
 
@@ -182,4 +183,11 @@ root.withdraw()
 
 - $e^x$ : `from math import exp`, `exp(x)`
 - $lnx$ : `import numpy`, `numpy.log()` (`log10()`는 상용로그)
+
+### 순열
+
+```python
+import itertools
+list(itertools.permutations([1, 2, 3]))
+```
 

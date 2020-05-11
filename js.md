@@ -78,15 +78,18 @@
     - `push()` : 배열 뒤에 추가
 - 값 제거
     - `pop()` : 마지막 주소에 값 제거
-    - `shift()` : 첫 번째 주고에 값 제거
+    - `shift()` : 첫 번째 주소에 값 제거
+- 검색
+    - `find(callback)` : 조건을 만족하는지 계속 확인. 만족하면 그거 하나 반환, 아니면 `undefined`
 - 기타
     - `length` : 배열의 길이 반환
     - `concat()` : 두 배열을 합쳐줌
     - `join()` : 배열값 사이에 원하는 문자를 삽입
     - `reverse()` : 역순으로 재배치
     - `sort()` : 정렬
-    - `slice()` : 배열의 일부분 반환
-    - `splice()` : 배열값을 빼내서 반환
+    - `slice(start, end)` : 배열의 일부분 반환 (`start`~`end-1`)
+    - `splice(start[, deleteCount[, item1 ...]])` : 배열에 값을 추가하거나 대체, 제거
+        - `start` 위치에서 `deleteCount`만큼 지우고 그 자리에 `item1 ...`을 추가
 - `[a, b, c] = [1, 2, 3]` 가능
 
 ### 불리언 리터럴
