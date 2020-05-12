@@ -1,5 +1,7 @@
 #  NoSQL
 
+- 초기에는 표준 SQL 인터페이스를 채용하지 않아 NoSQL이라 불렸으나 현재는 SQL 계열 쿼리 언어를 사용할 수 있다는 사실을 강조하면서 "Not only SQL"이라고도 불린다. ([출처]( https://ko.wikipedia.org/wiki/NoSQL ))
+
 ## Aggregation
 
 - [참고 링크]( https://docs.mongodb.com/manual/aggregation/ )

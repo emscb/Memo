@@ -45,11 +45,11 @@
 4. Number : 정수 또는 실수형 숫자
 5. String
 6. Symbol : 인스턴스가 고유하고 불변인 자료형
-7. 그리고 Object
+7. Object
 
 ### 자료형 변환
 
-- Python처럼 동적 형지정 언어라 선언할 때 자료형까지 지정할 필요가 없다.
+- Python처럼 동적 형 지정 언어라 선언할 때 자료형까지 지정할 필요가 없다.
 - 숫자와 문자열을 더할 땐 알아서 숫자를 문자열로 바꾼다. (더하기만)
 
 #### 문자열을 숫자로
@@ -71,7 +71,7 @@
 - `var fish = new Array();` : 선언만 가능, 선언하면서 초기화 가능
 - 추가 쉼표
     - e.g., `var fish = ["Lion", , "Angel"];`
-    - 지정되지 않은 요소를 `undefined`로 취급
+    - 지정되지 않은 요소를 undefined로 취급
     - 그래도 `undefined`라고 써주는 게 좋다.
 - 값 추가
     - `unshift()` : 배열 앞에 추가
@@ -80,14 +80,14 @@
     - `pop()` : 마지막 주소에 값 제거
     - `shift()` : 첫 번째 주소에 값 제거
 - 검색
-    - `find(callback)` : 조건을 만족하는지 계속 확인. 만족하면 그거 하나 반환, 아니면 `undefined`
+    - `find(callback)` : 조건을 만족하는지 계속 확인. 만족하면 그거 하나 반환, 아니면 undefined 반환
 - 기타
     - `length` : 배열의 길이 반환
     - `concat()` : 두 배열을 합쳐줌
     - `join()` : 배열값 사이에 원하는 문자를 삽입
     - `reverse()` : 역순으로 재배치
     - `sort()` : 정렬
-    - `slice(start, end)` : 배열의 일부분 반환 (`start`~`end-1`)
+    - `slice(start, end)` : 배열의 일부분 반환 (`start`~`end`-1)
     - `splice(start[, deleteCount[, item1 ...]])` : 배열에 값을 추가하거나 대체, 제거
         - `start` 위치에서 `deleteCount`만큼 지우고 그 자리에 `item1 ...`을 추가
 - `[a, b, c] = [1, 2, 3]` 가능
@@ -281,8 +281,6 @@ var logger = new winston.createLogger({
 
 export default logger;
 ```
-
-
 
 ## 기타
 
