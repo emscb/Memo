@@ -19,6 +19,16 @@
 - Map 단계에서는 각 document들을 process하고 각각에 대한 한 개 이상의 object를 **emit**한다.
 - Reduce 단계에서는 map 단계의 output을 combine한다.
 
+### Match
+
+```nosql
+$match: {
+	필드명: {조건}
+}
+```
+
+- 조건에 `$gte` 등 사용 가능
+
 ## Update
 
 ```
