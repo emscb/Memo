@@ -101,7 +101,7 @@ Container는 item들을 담고 있는 그릇이다.
 
 ## 기타
 
-- 높이를 기변적으로 맞추고 싶다면 `height: 100%`
+- 높이를 가변적으로 맞추고 싶다면 `height: 100%`
 - 텍스트에 그라데이션 입히기
 
 ```css
@@ -117,4 +117,5 @@ Container는 item들을 담고 있는 그릇이다.
     - `opacity`값을 주거나 `rgba(xxx,xxx,xxx,0.5)` 이런 식으로
 - 보통 `width`에는 `padding`값이 포함되지 않는다.
 - Root `font-size`가 16px이라면 1rem = 16px이다.
+- `li` 태그를 가로로 하려면 `float: left;`
 - 
