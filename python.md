@@ -191,3 +191,7 @@ import itertools
 list(itertools.permutations([1, 2, 3]))
 ```
 
+## 기타
+
+- 필요 패키지 리스팅 : `pip freeze > requirements.txt`
+- 
