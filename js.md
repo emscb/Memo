@@ -85,7 +85,7 @@
     - `length` : 배열의 길이 반환
     - `concat()` : 두 배열을 합쳐줌
     - `join()` : 배열값 사이에 원하는 문자를 삽입
-    - `reverse()` : 역순으로 재배치
+    - `reverse()` : 역순으로 재배치 (실제 배열이 바뀜)
     - `sort()` : 정렬
     - `slice(start, end)` : 배열의 일부분 반환 (`start`~`end`-1)
     - `splice(start[, deleteCount[, item1 ...]])` : 배열에 값을 추가하거나 대체, 제거
