@@ -195,3 +195,6 @@ list(itertools.permutations([1, 2, 3]))
 
 - 필요 패키지 리스팅 : `pip freeze > requirements.txt`
 - 
+- Django
+    - Form이나 model에서는 `ugettext_lazy()`를 사용해야 번역이 제대로 된다.
+
