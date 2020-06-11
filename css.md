@@ -118,4 +118,5 @@ Container는 item들을 담고 있는 그릇이다.
 - 보통 `width`에는 `padding`값이 포함되지 않는다.
 - Root `font-size`가 16px이라면 1rem = 16px이다.
 - `li` 태그를 가로로 하려면 `float: left;`
-- 
+- `a` 태그 클릭 비활성화
+    - `pointer-events: none; cursor: default;`
