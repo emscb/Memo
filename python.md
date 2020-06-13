@@ -197,4 +197,6 @@ list(itertools.permutations([1, 2, 3]))
 - 
 - Django
     - Form이나 model에서는 `ugettext_lazy()`를 사용해야 번역이 제대로 된다.
+    - Model에 있는 변수 값을 가져오고 싶을 때 `get_변수_display`
+    - 
 
