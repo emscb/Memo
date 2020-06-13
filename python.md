@@ -198,5 +198,10 @@ list(itertools.permutations([1, 2, 3]))
 - Django
     - Form이나 model에서는 `ugettext_lazy()`를 사용해야 번역이 제대로 된다.
     - Model에 있는 변수 값을 가져오고 싶을 때 `get_변수_display`
+        - ForiegnKey 걸려있으면 그냥 `변수`
+    - Admin에서 import/export 버튼 만들기
+        - `from import_export.admin import ImportExportModelAdmin`
+        - `class ProgramCategoryAdmin(ImportExportModelAdmin)`
+    - Form에서 보일 값들 필터링 : `__init__` 안에서 `self.fields[필드명].queryset = 모델.objects.filter(조건)`
     - 
 
