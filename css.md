@@ -99,6 +99,36 @@ Container는 item들을 담고 있는 그릇이다.
 - `E F` : E의 자손인 F (E 하위의 F 모두)
 - `E > F` : E의 자식인 F (E 바로 밑에 있는 F만)
 
+## Backgroud
+
+- [출처]( https://aboooks.tistory.com/157 )
+
+### background-image
+
+- 어떤 요소에 배경 이미지를 넣을 때
+- Padding을 포함하여 배경을 채운다. (Margin 제외)
+- 기본값으로 상단 위쪽에 위치하며, 가로, 세로 반복 (바둑판)
+- 이미지가 제대로 안 나올 수도 있으니 `background-color`도 같이 주자
+- `url(" ")` : 디렉토리상 주소 혹은 실제 주소
+- `background-repeat`
+    - `repeat` : 기본값. 바둑판 배열
+    - `repeat-x` : 가로로만 반복 (자매품 `repeat-y`)
+    - `no-repeat` : 반복 안 함
+- `background-attachment` : 이미지 고정 방식
+    - `scroll` : 기본값. 요소에 상대적
+    - `fixed` : 윈도우 창에 상대적 (스크롤바를 내려도 위치가 그대로)
+    - `local` : 스크롤할 때 요소에 상대적
+- `background-position`
+    - `left`, `right`, `center`, `top`, `bottom` 섞어서 쓰면 됌
+
+### background-size
+
+- `auto` : 배경 이미지 원래 width, height 그대로
+- 길이를 px, cm 등 단위로 줄 수 있음
+- % : 부모 요소에 비례한 비율로 지정
+- `cover` : 배경이 완전히 덮게 가능한 크게 표시
+- `contain` : 알맞게 들어감
+
 ## 기타
 
 - 높이를 가변적으로 맞추고 싶다면 `height: 100%`
@@ -120,3 +150,5 @@ Container는 item들을 담고 있는 그릇이다.
 - `li` 태그를 가로로 하려면 `float: left;`
 - `a` 태그 클릭 비활성화
     - `pointer-events: none; cursor: default;`
+- `backgroud-image`로 배경에 이미지 넣기
+- 
