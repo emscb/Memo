@@ -40,6 +40,7 @@
     * `<H1>Text</H1>` : 일치
     * `<H2>Text</H3>` : 불일치
     * `<H3>Text</H3>` : 일치
+* `(?P<name>regex)` : `regex` 패턴에 해당하는 텍스트를 `name`이라는 그룹에 저장
 
 ## Lookaround
 

@@ -203,5 +203,9 @@ list(itertools.permutations([1, 2, 3]))
         - `from import_export.admin import ImportExportModelAdmin`
         - `class ProgramCategoryAdmin(ImportExportModelAdmin)`
     - Form에서 보일 값들 필터링 : `__init__` 안에서 `self.fields[필드명].queryset = 모델.objects.filter(조건)`
+    - Admin에서 `ordering` desc로 하려면 필드명 앞에 `-` 붙이기
+    - `{% %}` 안에서는 변수를 쓸 때 `{{ }}`를 안 해도 된다.
+    - `model = Sponsor`는 `queryset = Sponsor.objects.all()`이다.
+        - `Sponsor.objects.filter(조건)`로 필터링
     - 
 
