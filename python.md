@@ -207,5 +207,6 @@ list(itertools.permutations([1, 2, 3]))
     - `{% %}` 안에서는 변수를 쓸 때 `{{ }}`를 안 해도 된다.
     - `model = Sponsor`는 `queryset = Sponsor.objects.all()`이다.
         - `Sponsor.objects.filter(조건)`로 필터링
+    - `비어있지 않음`을 필터링할 때 `paid_at__isnull=False`
     - 
 
