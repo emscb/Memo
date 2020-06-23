@@ -227,7 +227,7 @@
   - 그-냥 쓴다.
 - RAID Level 1 : Mirrored disks with block striping
   - 데이터를 완전히 중복시킴
-  - 총 디스크의 반 밖에 못씀 (가장 큰 단점)
+  - 총 디스크의 반 밖에 못 씀 (가장 큰 단점)
   - Write에서 best performance
 - RAID Level 2 : Bit-level striping, Memory-style error-correcting-codes (ECC)
   - 현재 데이터값에 대한 XOR값을 패리티로 같이 보관하면 나중에 recovery하기 좋다.
@@ -238,7 +238,7 @@
   - Data transfer가 빨라짐
   - 디스크 I/O가 적어짐
   - Level 2를 포함한다. (이점은 모두 가지고 cost는 더 적음)
-  - 결국 bit-striping이라 잘 안씀
+  - 결국 bit-striping이라 잘 안 씀
 - RAID Level 4 : Block-interleaved parity
   - Block-level striping
   - 패리티 블락을 하나의 디스크에
@@ -269,7 +269,7 @@
   - Rebuild하는데 얼마나 걸리는지
 - 결론
   - RAID 0 : 데이터가 별로 중요하지 않을 때
-  - 2, 4 : 잘 안쓴다. 각각 3과 5에 포함되니.
+  - 2, 4 : 잘 안 쓴다. 각각 3과 5에 포함되니.
   - 3 : Bit-striping이 별로 성능이 안좋아서 안씀
   - 6 : Multiple disk failure가 잘 발생안해서 안씀
   - 0, 1, 5 중에 선택하면 된다.
@@ -343,7 +343,7 @@
 
 - 하나의 relation은 하나의 파일인데 경우에 따라 여러 테이블을 하나의 파일로 저장함
 - 여러 테이블의 조인된 결과를 저장하는 것
-- 하나의 테이블에 대한 쿼리는 안좋다.
+- 하나의 테이블에 대한 쿼리는 안 좋다.
   - 각 테이블에 대한 포인터를 연결시켜 성능을 향상시킬 수 있다.
 
 ### Data Dictionary
@@ -363,11 +363,10 @@
   - 가장 최근에 사용되지 않은 걸(적게 쓰인 것) 버린다.
     - 블락의 past pattern을 보고 가정
   - OS에서는 많이 쓰지만 DBMS에서는 부적합
-    - Repeated scan에서 안좋음 (e.g., Nested loop(가장 최근에 쓴 데이터를 안쓸 확률이 높음))
+    - Repeated scan에서 안좋음 (e.g., Nested loop(가장 최근에 쓴 데이터를 안 쓸 확률이 높음))
 - MRU strategy
   - 가장 최근에 사용한 블락을 버림
 - OS와 다르게 DBMS에선 다른 기술이 필요하다.
   - **Buffer manager는 forced output을 제공해야 함** (recovery 때문에)
-
 
 

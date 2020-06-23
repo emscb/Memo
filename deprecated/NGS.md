@@ -1,11 +1,11 @@
 # Next Generation sequencing
 
-* sanger sequencing 다음의 기술
+* Sanger sequencing 다음의 기술
 
 ### Linux
 
-* 리눅스에서는 cmd기반으로 진행하기 때문에 pipeline을 사용해서 반복 작업을 하기 좋음
-* Windows를 사용하기 위해서는 패키지를 사야함
+* 리눅스에서는 cmd기반으로 진행하기 때문에 pipeline을 사용해서 반복 작업 하기 좋음
+* Windows를 사용하기 위해서는 패키지를 사야 함
 
 ### SAM file
 
@@ -18,25 +18,25 @@
 > https://www.slideshare.net/ueb52/introduction-to-bioinformatics-uebuat-bioinformatics-course-session-11-vhir-barcelona
 
 * FLAGS
-    * reverse complement : 염기를 상보적으로 바꿔서 매핑
+    * Reverse complement : 염기를 상보적으로 바꿔서 매핑
     * FLAGS 빨리 해보기 : `samtools flags 숫자`
     * 마주보고 매핑되야 properly
 
-* sequence에 있지만 mapping이 안된건 소문자로 표시 (mismatch)
+* Sequence에 있지만 mapping이 안 된건 소문자로 표시 (mismatch)
 
 * Optional fields
     * NM : reference와 차이가 몇 개인지 (mismatch)
-    * MD : e.g.36T25, 36개가 match, 하나가 reference가 T, 25개 match
+    * MD : e.g., 36T25, 36개가 match, 하나가 reference가 T, 25개 match
     * AS : 점수가 높으면 match가 잘 된 것
 
 ### SOAPdenovo
 
 > https://github.com/aquaskyline/SOAPdenovo2/blob/d209aa3a98e6e76191c12480d91e1f9e01b1b5e8/README.md
 
-* contig들을 연결해서 scaffold를 만듦
+* Contig들을 연결해서 scaffold를 만듦
 * 사이의 N들은 gap (미처 알아내지 못한 서열)
 * contig N50 : 50% 지점을 지나는 contig의 length (긴 contig부터 했을 때)
-* mapping을 통해 pair의 위치를 고려해 contig의 위치, 순서를 파악한다.
+* Mapping을 통해 pair의 위치를 고려해 contig의 위치, 순서를 파악한다.
 
 * `.contigPosInscaff` : contig들이 scaffold안에 어느 위치에 있느냐, contig가 scaff된 순서, 방향, 위치를 표시
     * `-` : 여기부터 여기까지 (?)
@@ -50,30 +50,30 @@
 ### BLAST
 
 * 소문자로 쓰여진 것은 low complexity : non-specific한 hit가 생길 확률이 높아 잘 사용하지 않음, 점수에는 들어가지만 최초에 seeding할 때 사용하지 않음
-* 앞쪽부분이 점수가 낮아서 hit 표시가 안떴는데, 앞 부분을 보고 싶으면 앞쪽 구간만 지정해서 다시 blast해주면 된다.
+* 앞쪽 부분이 점수가 낮아서 hit 표시가 안 떴는데, 앞 부분을 보고 싶으면 앞쪽 구간만 지정해서 다시 blast해주면 된다.
 
 ### Insertion된 위치 찾기
 
-* tablet으로 찾기에는 너무 시간이 오래걸린다. 어디 삽입됬는지 모른다면 더더욱
+* Tablet으로 찾기에는 너무 시간이 오래걸린다. 어디 삽입됬는지 모른다면 더더욱
 * 한 쪽은 reference에 mapping되고 mate가 insertion된 부위에 mapping되어있는 read들을 모아 비교해본다.
-* mapping이 시작된 좌표가 동일하고 CIGAR가 skip이 많은 read들이 많은 부위가 insertion으로 의심되는 부분이다.
+* Mapping이 시작된 좌표가 동일하고 CIGAR가 skip이 많은 read들이 많은 부위가 insertion으로 의심되는 부분이다.
 * 혹은 시작 위치는 다르지만 mapping의 끝나는 위치가 같고 CIGAR에 skip이 많은 부분을 보는 것도 가능
 
 ### 1000 genomes project
 
 * 인종별, 지역별로 사람의 유전체를 연구
-* depth가 좀 낮다. sample수를 늘리는 대가
+* Depth가 좀 낮다. Sample수를 늘리는 대가
 * 이곳에 없는 돌연변이가 질병과 관련될 가능성이 높다.
 * 멀쩡한 사람들 위주로 뽑았기 때문에 돌연변이가 크게 위험하진 않다.
 
 ### Ensembl
 
 * 얘네 나름의 버전 넘버링을 한다. 75까지가 GRCh37에 해당
-* human이랑 release번호가 안맞는게 ensembl은 다른 종까지 해서 한번에 release하기 때문
-* alternative sequence : snp로 설명이 안되고 sequence 자체가 다른 것
-* rm : repeat sequence는 x로 marking, human genome에 45%정도가 repeat
-* sm : soft masking, x로 안하고 small 알파벳으로 marking
-* blast는 small을 다 넘어가는데 bwa는 넘어가는지 모르겠다.
+* Human이랑 release 번호가 안 맞는게 ensembl은 다른 종까지 해서 한번에 release하기 때문
+* Alternative sequence : Snp로 설명이 안 되고 sequence 자체가 다른 것
+* rm : Repeat sequence는 x로 marking, human genome에 45%정도가 repeat
+* sm : Soft masking, x로 안하고 small 알파벳으로 marking
+* Blast는 small을 다 넘어가는데 bwa는 넘어가는지 모르겠다.
 
 ### FTP, rsync
 
@@ -84,7 +84,7 @@
 
 ### bcftools에서 exon 부분 뽑아내기
 
-* `bcftools view`에서 -R이나 -r 옵션 사용
+* `bcftools view`에서 `-R`이나 `-r` 옵션 사용
 * `bcftools view -R ZGPAT파일 vcf파일 | bcftools filter -i 'DP>100'`
 
 > https://samtools.github.io/bcftools/bcftools.html
@@ -105,7 +105,7 @@
 * 하나의 read를 3등분하자
 * 3개가 모두 붙어서 매핑되면 모두 exon에 있는거다.
 * 2번이 짤려있고 1번과 3번이 나눠진 경우들을 모은다.
-* 1번의 오른쪽과 3번의 왼쪽 part를 모으면 2번 조각을 알 수 있을거지만 정확히 어디까지 끊어야하는지를 알 수 없다.
+* 1번의 오른쪽과 3번의 왼쪽 part를 모으면 2번 조각을 알 수 있을거지만 정확히 어디까지 끊어야 하는지를 알 수 없다.
 * 그 사이의 intron이 GT로 시작해서 AG로 끝난다는 성질을 이용한다.
 * 여러 후보 중 2번 조각과 같은 것을 찾는다.
 
@@ -115,7 +115,7 @@
 
 ### FPKM
 
-* pair-end 데이터의 경우 RPKM 대신 FPKM(fragment ..)로 진행을 하는 것이 더 정확하다.
+* Pair-end 데이터의 경우 RPKM 대신 FPKM(fragment ..)로 진행을 하는 것이 더 정확하다.
 
 ### 앞에 chr붙이기
 
@@ -142,16 +142,16 @@
 * trans-elements : 결합하는 단백질을 포함한 다른데서 온 조절자
 * Nuc : nucleophile(donor) (<-> Electrophile)
 * CpG : C 다음 phospho-bond 다음 G, 여기서 C에 methylation이 된다.
-* CpG island : 그런 부분이 농축되어있는 부분
+* CpG island : 그런 부분이 농축되어 있는 부분
 * 메틸레이션된 위치는 MBD가 인식, 다른 친구들도 불러, 그런 식으로 발현을 억제
-* tumor와 정상 세포와의 메틸레이션 차이를 연구하기도 해
+* Tumor와 정상 세포와의 메틸레이션 차이를 연구하기도 해
 
 ### Histone modification
 
 * 메틸레이션이나 아세틸레이션이 되면 감기는 정도에 차이가 생길 수 있다.
-* `H3K4` : 3번 째 히스톤에 4번 째 lysine
+* `H3K4` : 3번째 히스톤에 4번째 lysine
 * Inactive chromation : 전사 저해
-* enhancer는 멀리 떨어져있어서 찾기 어려운데 `K4me1`을 타겟팅시켜서 침전 후 mapping시키면 시퀀스를 알 수 있다.
+* Enhancer는 멀리 떨어져있어서 찾기 어려운데 `K4me1`을 타겟팅시켜서 침전 후 mapping시키면 시퀀스를 알 수 있다.
 
 ﻿### BWA
 
@@ -181,7 +181,7 @@
     * 네 번째 줄은 위 base call quailty를 나타냄
 * 기관마다 등록번호 첫 글자가 다르다.
     * NCBI는 SRR, SRR, EBI는 ERR, DDBJ는 DRR로 시작
-    * 일련번호에 빈 번호는 불량한 내용을 필터링했기때문에 발생
+    * 일련번호에 빈 번호는 불량한 내용을 필터링했기 때문에 발생
 * 기관에 등록된, 공공DB에서 다운한 것이 아닌 장비에서 직접 얻은 파일은 등록번호가 빠져있다.
 
 ## FASTQC, ngsShort
@@ -242,14 +242,5 @@
 * 알려지지 않은 것
 
 > `awk '$0 !~ /\|rs/' VEP.vcf > VEP.unknown.vcf`
-
-
-
-
-
-
-
-
-
 
 
