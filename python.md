@@ -208,5 +208,6 @@ list(itertools.permutations([1, 2, 3]))
     - `model = Sponsor`는 `queryset = Sponsor.objects.all()`이다.
         - `Sponsor.objects.filter(조건)`로 필터링
     - `비어있지 않음`을 필터링할 때 `paid_at__isnull=False`
+    - `base.html`에 들어가는 변수, context들은 `context_processor.py`에서 넣어준다.
     - 
 
