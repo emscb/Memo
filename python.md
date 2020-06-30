@@ -209,5 +209,6 @@ list(itertools.permutations([1, 2, 3]))
         - `Sponsor.objects.filter(조건)`로 필터링
     - `비어있지 않음`을 필터링할 때 `paid_at__isnull=False`
     - `base.html`에 들어가는 변수, context들은 `context_processor.py`에서 넣어준다.
+    - Form의 `class Meta`에서는 테이블 읽거나 그런거 하지 말자 (test/deploy에서 터질 수 있음)
     - 
 
