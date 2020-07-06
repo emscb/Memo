@@ -195,20 +195,4 @@ list(itertools.permutations([1, 2, 3]))
 
 - 필요 패키지 리스팅 : `pip freeze > requirements.txt`
 - 
-- Django
-    - Form이나 model에서는 `ugettext_lazy()`를 사용해야 번역이 제대로 된다.
-    - Model에 있는 변수 값을 가져오고 싶을 때 `get_변수_display`
-        - ForiegnKey 걸려있으면 그냥 `변수`
-    - Admin에서 import/export 버튼 만들기
-        - `from import_export.admin import ImportExportModelAdmin`
-        - `class ProgramCategoryAdmin(ImportExportModelAdmin)`
-    - Form에서 보일 값들 필터링 : `__init__` 안에서 `self.fields[필드명].queryset = 모델.objects.filter(조건)`
-    - Admin에서 `ordering` desc로 하려면 필드명 앞에 `-` 붙이기
-    - `{% %}` 안에서는 변수를 쓸 때 `{{ }}`를 안 해도 된다.
-    - `model = Sponsor`는 `queryset = Sponsor.objects.all()`이다.
-        - `Sponsor.objects.filter(조건)`로 필터링
-    - `비어있지 않음`을 필터링할 때 `paid_at__isnull=False`
-    - `base.html`에 들어가는 변수, context들은 `context_processor.py`에서 넣어준다.
-    - Form의 `class Meta`에서는 테이블 읽거나 그런거 하지 말자 (test/deploy에서 터질 수 있음)
-    - 
 

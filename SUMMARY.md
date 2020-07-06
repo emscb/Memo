@@ -7,6 +7,7 @@
 * [Argparse Tutorial](argparse-tutorial.md)
 * [C++](c++.md)
 * [CSS](css.md)
+* [Django](django.md)
 * [HTML](html.md)
 * [JavaScript](js.md)
 * [MFC](mfc.md)
