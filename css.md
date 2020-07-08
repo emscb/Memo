@@ -150,5 +150,5 @@ Container는 item들을 담고 있는 그릇이다.
 - `li` 태그를 가로로 하려면 `float: left;`
 - `a` 태그 클릭 비활성화
     - `pointer-events: none; cursor: default;`
-- `backgroud-image`로 배경에 이미지 넣기
+- 글자가 분리되게 하기 (wrapping) : `word-break: keep-all;` 등
 - 
