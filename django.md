@@ -19,6 +19,7 @@
     - ForiegnKey 걸려있으면 그냥 `변수`
 - `{% %}` 안에서는 변수를 쓸 때 `{{ }}`를 안 해도 된다.
 - `base.html`에 들어가는 변수, context들은 `context_processor.py`에서 넣어준다.
+- `date:"날짜 형식"` : 날짜 객체를 마음대로 표시해보자 (i18n 번역 가능) ([참조]( https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#date ))
 - 
 
 ## Admin Page
