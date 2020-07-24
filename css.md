@@ -151,4 +151,6 @@ Container는 item들을 담고 있는 그릇이다.
 - `a` 태그 클릭 비활성화
     - `pointer-events: none; cursor: default;`
 - 글자가 분리되게 하기 (wrapping) : `word-break: keep-all;` 등
+- 그림자 효과 : `box-shadow: 2px 2px 5px gray`
+    - offset-x, offset-y, blur-radius, color
 - 
