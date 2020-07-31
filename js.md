@@ -91,6 +91,11 @@
     - `splice(start[, deleteCount[, item1 ...]])` : 배열에 값을 추가하거나 대체, 제거
         - `start` 위치에서 `deleteCount`만큼 지우고 그 자리에 `item1 ...`을 추가
 - `[a, b, c] = [1, 2, 3]` 가능
+- `in` 연산자
+    - 속성이 객체에 존재하는지 체크 (기존의 값 체크 아님)
+    - `2 in [1,2,3]` : True. 배열의 2번째 값 있음
+    - `"length" in [1,2,3]` : True. 배열이 `length`라는 속성 가짐
+- 배열 내에서 값을 찾기 위해서는 `include()`를 쓰자
 
 ### 불리언 리터럴
 
@@ -146,7 +151,32 @@ var obj = {
 
 ```js
 var re = /ab+c/;
+혹은 var re = new RegExp("ab+c");
 ```
+
+- [참고]( [https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/정규식))
+- 정규식 표현 방법은 (거의) 동일
+- 메서드
+    - `exec` : 대응되는 문자열을 찾는다. 찾은 결과를 가진 배열을 반환. 없다면 `null`
+    - `test` : 대응되는 문자열이 있는지 검사. T/F 반환
+    - `match` : `exec`와 동일
+    - `search` : 대응되는 문자열이 있는지 검사하는 `String` 메서드 (이 위는 `RegExp` 메서드). 대응된 부분의 인덱스를 반환. 없다면 -1 반환
+    - `replace` : 대응되는 문자열을 찾아 치환하는 `String` 메서드
+    - `split` : 정규식 혹은 문자열로 대상 문자열을 나눠 배열로 반환
+- 그루핑
+    - 정규식에 소괄호를 치면 그 부분이 따로 저장됨
+    - 저장된 내용을 사용할 때는 `$1 $2`와 같이 사용
+- 플래그
+    - `/pattern/flags`
+
+Flag|Description
+:-:|:-:
+g|전역 검색
+i|대소문자 구분 없는 검색
+m|다중행(multi-line) 검색
+s|`.`에 개행 문자도 매칭 (ES2018)
+u|유니코드; 패턴을 유니코드 코드 포인트의 나열로 취급
+y|sticky 검색 수행. 문자열의 현재 위치부터 검색을 수행
 
 ### 문자열 리터럴
 
@@ -169,6 +199,8 @@ var re = /ab+c/;
 | \\'  | Apostrophe 혹은 작은 따옴표 |
 | \\"  | 큰 따옴표                   |
 | \\\  | 백슬래시                    |
+
+- 문자열 뒤집기 : `word.split("").reverse().join("")`
 
 ## 화살표 함수 (Arrow function)
 
@@ -282,6 +314,35 @@ var logger = new winston.createLogger({
 });
 
 export default logger;
+```
+
+## 입력 받기
+
+- `readline`을 쓰자 ([참고]( https://nodejs.sideeffect.kr/docs/v0.8.9/api/readline.html ))
+
+```js
+const readline = require('readline');
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+rl.on("line", (변수) => {
+    console.log(변수);
+    r.close();
+}).on("close", () => {
+    process.exit();
+})
+```
+
+- 여러 줄 입력 받기
+
+```js
+let input = [];
+rl.on('line', (line) => {
+    input.push(line);
+});
 ```
 
 ## 기타
