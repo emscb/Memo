@@ -59,6 +59,9 @@
 - `parseFloat()`
 - 간단한 방법은 `+`(단항 더하기 연산자)로 바꾸면 된다.
     - e.g., `+"1.1" + +"1.1" = 2.2`
+- ASCII 숫자로 바꾸기
+    - `문자(열).charCodeAt(index)`
+    - 반대로는 `String.fromCharCode(ascii)`
 
 ## 리터럴
 
@@ -69,6 +72,8 @@
 
 - 0개 이상의 식 목록 (list)
 - `var fish = new Array();` : 선언만 가능, 선언하면서 초기화 가능
+- 기본적으로 `=`를 이용하면 shallow copy가 되기 때문에 원본을 건드릴 수 있다.
+    - Deep copy는 `Array.from(배열)`로 혹은 `[...배열]`
 - 추가 쉼표
     - e.g., `var fish = ["Lion", , "Angel"];`
     - 지정되지 않은 요소를 undefined로 취급
@@ -81,21 +86,28 @@
     - `shift()` : 첫 번째 주소에 값 제거
 - 검색
     - `find(callback)` : 조건을 만족하는지 계속 확인. 만족하면 그거 하나 반환, 아니면 undefined 반환
+        - e.g., `array1.find(element => element > 10);`
+    - `indexOf()` : 주어진 값의 인덱스 반환. 없으면 -1
 - 기타
     - `length` : 배열의 길이 반환
-    - `concat()` : 두 배열을 합쳐줌
+    - `concat()` : 두 배열을 합쳐줌 (**원본을 건드리지 않음**)
     - `join()` : 배열값 사이에 원하는 문자를 삽입
     - `reverse()` : 역순으로 재배치 (실제 배열이 바뀜)
-    - `sort()` : 정렬
+    - `sort(compareFunction)` : 정렬 ([참조]( https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort ))
+        - 함수가 주어지지 않으면 전부 **문자열**로 바꾼 뒤 정렬
+        - `함수(a,b)`가 0보다 작은 값을 반환하면 `a`가 `b`보다 앞으로 간다.
+        - `list.slice(0).sort()`를 하면 원래 `list`를 건드리지 않고 정렬된 리스트를 구할 수 있다. (최대, 최솟값 구할 때 이렇게)
     - `slice(start, end)` : 배열의 일부분 반환 (`start`~`end`-1)
     - `splice(start[, deleteCount[, item1 ...]])` : 배열에 값을 추가하거나 대체, 제거
         - `start` 위치에서 `deleteCount`만큼 지우고 그 자리에 `item1 ...`을 추가
+    - `map((element) => {...})` : 하나씩 꺼내서 뭘 해보기
+    - `filter((element) => 조건)` : 하나씩 조건에 맞는지 체크 true면 반환
 - `[a, b, c] = [1, 2, 3]` 가능
 - `in` 연산자
     - 속성이 객체에 존재하는지 체크 (기존의 값 체크 아님)
     - `2 in [1,2,3]` : True. 배열의 2번째 값 있음
     - `"length" in [1,2,3]` : True. 배열이 `length`라는 속성 가짐
-- 배열 내에서 값을 찾기 위해서는 `include()`를 쓰자
+- 배열 내에서 값을 찾기 위해서는 `includes()`를 쓰자
 
 ### 불리언 리터럴
 
@@ -158,9 +170,14 @@ var re = /ab+c/;
 - 정규식 표현 방법은 (거의) 동일
 - 메서드
     - `exec` : 대응되는 문자열을 찾는다. 찾은 결과를 가진 배열을 반환. 없다면 `null`
+        - `re.exec(문자열)`
     - `test` : 대응되는 문자열이 있는지 검사. T/F 반환
+        - `re.test(문자열)`
     - `match` : `exec`와 동일
+        - `문자열.match(re)`
+        - `matchAll` : 모두 찾아줌 (node.js 12 이상) (`g` flag 필수) (`[...문자열.matchAll(re)]`)
     - `search` : 대응되는 문자열이 있는지 검사하는 `String` 메서드 (이 위는 `RegExp` 메서드). 대응된 부분의 인덱스를 반환. 없다면 -1 반환
+        - `문자열.search(re)`
     - `replace` : 대응되는 문자열을 찾아 치환하는 `String` 메서드
     - `split` : 정규식 혹은 문자열로 대상 문자열을 나눠 배열로 반환
 - 그루핑
@@ -201,6 +218,7 @@ y|sticky 검색 수행. 문자열의 현재 위치부터 검색을 수행
 | \\\  | 백슬래시                    |
 
 - 문자열 뒤집기 : `word.split("").reverse().join("")`
+- `indexOf(문자(열))` : 일치하는 첫 번째 인덱스 반환
 
 ## 화살표 함수 (Arrow function)
 
