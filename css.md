@@ -87,6 +87,7 @@ Container는 item들을 담고 있는 그릇이다.
 ### absolute
 
 - relative는 static일 때를 기준으로 주어진 픽셀만큼 움직이지만, **absolute는 static이지 않은 부모를 기준으로 움직인다.**
+- `left` : 왼쪽을 기준으로 얼마나 오른쪽으로 옮길지 (양수면 오른쪽, 음수면 왼쪽)
 - div여도 더 이상 width: 100%가 아니다.
 
 ### fixed
