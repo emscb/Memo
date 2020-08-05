@@ -3,6 +3,7 @@
 ## `views.py`
 
 - `비어있지 않음`을 필터링할 때 `paid_at__isnull=False`
+- 쿼리 결과 정렬 : `filter().order_by('컬럼명')`
 - 
 
 ## `forms.py`
