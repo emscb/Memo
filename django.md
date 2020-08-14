@@ -12,7 +12,12 @@
 - `model = Sponsor`는 `queryset = Sponsor.objects.all()`이다.
     - `Sponsor.objects.filter(조건)`로 필터링
 - Form의 `class Meta`에서는 테이블 읽거나 그런거 하지 말자 (test/deploy에서 터질 수 있음)
-- 
+
+## `models.py`
+
+- 한 테이블에서 같은 테이블에 2개의 포린키를 걸면 에러가 뜬다.
+    - 장고에서는 포린키를 걸면 반대 방향의 reverse relation을 만들기 때문
+    - 각 필드에 `related_name`을 명시해주면 해결
 
 ## Template
 
