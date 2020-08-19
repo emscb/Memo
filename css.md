@@ -156,4 +156,9 @@ Container는 item들을 담고 있는 그릇이다.
     - offset-x, offset-y, blur-radius, color
 - 텍스트 숨기기
     - 그냥 밑에 텍스트를 `span`으로 감싸고 걔를 `display: none;`
+- 원화 표시 : ` &#8361;`
+- 체크박스
+    - ` <input type="checkbox" name="vehicle3" value="Boat" checked> `
+    - ` <label for="vehicle3"> I have a boat</label><br><br> `
+    - `name`이 뒷단에서 구별에 쓰임
 - 
