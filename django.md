@@ -34,7 +34,11 @@
     - `from import_export.admin import ImportExportModelAdmin`
     - `class ProgramCategoryAdmin(ImportExportModelAdmin)`
 - Admin에서 `ordering` desc로 하려면 필드명 앞에 `-` 붙이기
-- 
+- 인스턴스 만들 때 foreign key를 자동으로 채우려면 `autocomplete_field` 명시하기
+- Action 만들기
+    - `def 함수명(self.request, queryset): queryset.update(내용)`
+    - `action = (함수명,)`
+    - `action.short_description = "액션 설명"`
 
 ## `tests.py`
 
