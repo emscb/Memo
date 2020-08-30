@@ -161,4 +161,5 @@ Container는 item들을 담고 있는 그릇이다.
     - ` <input type="checkbox" name="vehicle3" value="Boat" checked> `
     - ` <label for="vehicle3"> I have a boat</label><br><br> `
     - `name`이 뒷단에서 구별에 쓰임
+- 언어 구분 : `a:lang(en)`
 - 
