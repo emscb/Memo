@@ -39,6 +39,12 @@
     - `def 함수명(self.request, queryset): queryset.update(내용)`
     - `action = (함수명,)`
     - `action.short_description = "액션 설명"`
+- Foriegn key 필드 만들기
+    - `def 함수명(self, obj): return obj.필드명`
+    - 필드 헤더 바꾸기 `함수명.short_description = "헤더명"`
+    - 이 필드를 `search_fields`에 넣으면 가끔 에러가 뜨는데, 이건 FK가 걸린 필드도 `search_fields`에 들어있어서 그렇다.
+    - `search_fields`에 넣을 때는 `함수명` 대신 `__`를 이용해서 그냥 쓰자
+- 
 
 ## `tests.py`
 
