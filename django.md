@@ -4,7 +4,7 @@
 
 - `비어있지 않음`을 필터링할 때 `paid_at__isnull=False`
 - 쿼리 결과 정렬 : `filter().order_by('컬럼명')`
-- 
+- 일반 string을 return하면 안 되는 경우가 많다. `HttpResponse`에 담거나 `reverse()`라면 `HttpResponseRedirect`에 담자
 
 ## `forms.py`
 
@@ -44,6 +44,7 @@
     - 필드 헤더 바꾸기 `함수명.short_description = "헤더명"`
     - 이 필드를 `search_fields`에 넣으면 가끔 에러가 뜨는데, 이건 FK가 걸린 필드도 `search_fields`에 들어있어서 그렇다.
     - `search_fields`에 넣을 때는 `함수명` 대신 `__`를 이용해서 그냥 쓰자
+- Custom filter 만들기 ([참조]( https://docs.djangoproject.com/en/1.11/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_filter ))
 - 
 
 ## `tests.py`
