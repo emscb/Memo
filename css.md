@@ -148,7 +148,7 @@ Container는 item들을 담고 있는 그릇이다.
     - `opacity`값을 주거나 `rgba(xxx,xxx,xxx,0.5)` 이런 식으로
 - 보통 `width`에는 `padding`값이 포함되지 않는다.
 - Root `font-size`가 16px이라면 1rem = 16px이다.
-- `li` 태그를 가로로 하려면 `float: left;`
+- `li` 태그를 가로로 하려면 `float: left;` 혹은 `display: inline-block`
 - `a` 태그 클릭 비활성화
     - `pointer-events: none; cursor: default;`
 - 글자가 분리되게 하기 (wrapping) : `word-break: keep-all;` 등

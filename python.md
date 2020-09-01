@@ -147,9 +147,10 @@ root.withdraw()
 * `startswith(str, beg=0, end=len(string))` : 해당 문자열로 시작하는지
 * `count()` : 카운트 가능
 
-## `map`
+## `map`, `reduce`
 
 * `a, b = map(int, input().strip().split(' '))`
+* `reduce(함수, 대상[, 초기값])` ([참조]( https://www.daleseo.com/python-functools-reduce/ ))
 
 ## Dictionary
 

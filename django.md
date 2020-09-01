@@ -54,7 +54,10 @@
     - `self.assertIs`, `self.assertEqual` 등의 함수로 값이 맞는지 확인
     - 뷰 테스트는 `self.client.get('주소')`를 이용해서 내용을 본다.
 - `python manage.py test [앱 이름]` : 테스트 실행
-- 
+
+## `urls.py`
+
+- `re_path`에서 바로 redirect가 하고 싶을 땐 `RedirectView.as_view(url="링크", permanent=False)` (premenent는 발생 오류 코드의 차이)
 
 ## 기타
 
