@@ -14,6 +14,8 @@
 |caption|표 제목|
 
 - td 안에서 `<td colspan=4>` 이렇게 4칸을 가로로 합친다.
+- 열 너비 설정
+    - `<colgroup><col span="1" style="width: 33%;"></colgroup>`
 
 ## 기타
 
