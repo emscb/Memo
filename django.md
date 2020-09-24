@@ -5,6 +5,7 @@
 - `비어있지 않음`을 필터링할 때 `paid_at__isnull=False`
 - 쿼리 결과 정렬 : `filter().order_by('컬럼명')`
 - 일반 string을 return하면 안 되는 경우가 많다. `HttpResponse`에 담거나 `reverse()`라면 `HttpResponseRedirect`에 담자
+- `@cache_page`로 view 단위 캐싱 적용 가능
 
 ## `forms.py`
 
@@ -26,7 +27,7 @@
 - `{% %}` 안에서는 변수를 쓸 때 `{{ }}`를 안 해도 된다.
 - `base.html`에 들어가는 변수, context들은 `context_processor.py`에서 넣어준다.
 - `date:"날짜 형식"` : 날짜 객체를 마음대로 표시해보자 (i18n 번역 가능) ([참조]( https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#date ))
-- 
+- `{% load cache %}`하고 `{% cache timeout cache_name%}`로 감싸면 해당 부분 캐싱
 
 ## Admin Page
 
@@ -58,6 +59,7 @@
 ## `urls.py`
 
 - `re_path`에서 바로 redirect가 하고 싶을 땐 `RedirectView.as_view(url="링크", permanent=False)` (premenent는 발생 오류 코드의 차이)
+- `cache_page`로 view 단위에 캐싱 적용 가능
 
 ## 기타
 
