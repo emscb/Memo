@@ -64,4 +64,17 @@
 ## 기타
 
 - Form이나 model에서는 `ugettext_lazy()`를 사용해야 번역이 제대로 된다.
+- ImageField에 수정된 이미지 넣기
+
+```python
+from io import BytesIO
+from django.core.files import File
+
+canvas = Image.new('RGB', (total_width, total_height), 'white')
+...
+blob = BytesIO()
+canvas.save(blob, 'JPEG')  
+self.qrcode_file.save('ticket-filename.jpg', File(blob), save=False) 
+```
+
 - 
