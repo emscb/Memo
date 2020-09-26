@@ -6,6 +6,16 @@
 - 쿼리 결과 정렬 : `filter().order_by('컬럼명')`
 - 일반 string을 return하면 안 되는 경우가 많다. `HttpResponse`에 담거나 `reverse()`라면 `HttpResponseRedirect`에 담자
 - `@cache_page`로 view 단위 캐싱 적용 가능
+- Form에 기본값 넣어주기
+
+```python
+def get_initial(self):
+    init_val = super().get_initial()
+    init_val['email_address'] = self.request.user.email
+    return init_val
+```
+
+- 
 
 ## `forms.py`
 
