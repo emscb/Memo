@@ -125,17 +125,36 @@ root.withdraw()
 * 곱하기로 리스트 만들기
   * 행렬 만들기 : `[ [0] * N ] * M` \(단, 이렇게 만들면 값 고칠 때 망함 ~~소프트 링크인 듯~~\)
   * 그러니까 `[ [0 for _ in range(N)] for _ in range(M) ]` 이렇게 만들자
+  
 * `pop(index)` : `index`값을 안 주면 마지막 원소가 빠져나감
+
 * `insert(index, value)` : 특정 위치에 값을 끼워넣는다.
+
 * `remove(value)` : 첫 번째로 나오는 `value`를 삭제 (앞에서부터 탐색)
+
 * `count(value)` : `value`가 리스트에 몇 개 있는지
+
 * `index(value)` : `value`가 리스트에 어디 있는지 index 반환
+
 * `reverse()` : 그대로 역순으로 뒤집음
+
 * `sort()` : 리스트를 오름차순으로 정렬 (원래 리스트에 덮어씀)
+
 * `list2 = list1.copy()` : 얘도 포인터라 이렇게 해야 하나 봅니다.
+
 * 최빈값 구하기 : `max(list, key=list.count)`
+
 * 내부 값들을 한 번에 정수로 : `Ns = [int(x) for x in Ns]`
+
 * Flat list : `ex_list = [item for sublist in ex_list for item in sublist]`
+
+* List of list의 각 list를 함수 parameter로 주기
+
+  * ```python
+    itertools.product(items_list)  # [([1,2,3]), ([4,5,6])] 원하는 대로 안 됨 itertools.product(*items_list) # [(1,4), (1,5), (1,6), (2,4)...] 조합 완성!
+    ```
+
+* 
 
 ## 문자열
 
@@ -146,6 +165,8 @@ root.withdraw()
 * `print(,)` : 콤마로 구분하면 자동으로 띄어쓰기 한 칸 넣고 그냥 출력해줌 (정수라도)
 * `startswith(str, beg=0, end=len(string))` : 해당 문자열로 시작하는지
 * `count()` : 카운트 가능
+* `join(iterable)` : 셀 수 있는 것들을 하나씩 붙여 문자열로 만듭니다. 사용한 문자열을 사이에 넣어 붙임
+  * `'-'.join(["A", "B"])` -> `"A-B"`
 
 ## `map`, `reduce`
 
