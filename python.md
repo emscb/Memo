@@ -218,5 +218,5 @@ list(itertools.permutations([1, 2, 3]))
 - 필요 패키지 리스팅 : `pip freeze > requirements.txt`
 - 파일 UTF-8으로 읽고 쓰기
     - `open("경로", encoding='UTF-8')`
-- 
+- Datetime default 생김새 : `%Y-%m-%dT%H:%M:%S`
 
