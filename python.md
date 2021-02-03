@@ -93,7 +93,7 @@
 
 * float을 지정한 자리수만큼 출력하기 : `%.3f` \(소수점 3자리까지\)
 * string 출력 width 지정해주기 \(오른쪽으로 붙음\) : `%5s`
-* string 출력시 width를 주고 가운데 정렬 : `print(a % b.center(width))`
+* string 출력시 width를 주고 가운데 정렬 : `print(a.center(width))`
 * 한 줄에 계속 출력하기 : `print(f"{i}번째 출력\r", end="")`
 
 ## Set
@@ -219,5 +219,5 @@ list(itertools.permutations([1, 2, 3]))
 - 필요 패키지 리스팅 : `pip freeze > requirements.txt`
 - 파일 UTF-8으로 읽고 쓰기
     - `open("경로", encoding='UTF-8')`
-- Datetime default 생김새 : `%Y-%m-%dT%H:%M:%S`
+- Datetime default 생김새 : `%Y-%m-%dT%H:%M:%S%z`
 
