@@ -180,6 +180,7 @@ root.withdraw()
 * Item 지우기 : `del dict[key]`
 * JSON으로 바꾸기 : `json.dumps(dict)` (`import json`)
     * 반대로는 `json.loads(json)`
+* 합치기 : `dict1.update(dict2)`
 
 ## 무작위
 
@@ -221,3 +222,7 @@ list(itertools.permutations([1, 2, 3]))
     - `open("경로", encoding='UTF-8')`
 - Datetime default 생김새 : `%Y-%m-%dT%H:%M:%S%z`
 
+- Outer scope의 변수에 접근하기 : `nonlocal 변수명` 하면 접근 가능해짐
+- Except 여러 개 : `or`이 아니라 `(A, B, C) as e` 이렇게
+- URL encode : `urllib.parse.quote`. 반대로는 `unquote`
+- 
