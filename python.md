@@ -41,6 +41,7 @@
 ### `findall`
 
 * 주어진 문자열 전체에서 패턴과 일치하는 것을 모두 찾아 list로 반환
+* 안에 group이 있는지 잘 확인하고 전체로 감싸던가 하자!
 * `search()`는 패턴과 일치하는 첫 번째 문자열만 반환하지만 얘는 전부 반환해준다.
 * `[list of groups] = re.findall(pattern, string, flag=0)`
 
