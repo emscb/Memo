@@ -216,14 +216,25 @@ import itertools
 list(itertools.permutations([1, 2, 3]))
 ```
 
+## Copy
+
+```python
+import copy
+```
+
+- 얕은 복사 : 원본 객체를 가리키는 참조를 새로운 복합 객체에 삽입해서 반환 (`copy(x)`)
+- 깊은 복사 : 재귀적으로 원본 객체의 사본을 새로 만든 복합 객체에 삽입해서 반환 (`deepcopy(x)`)
+
 ## 기타
 
 - 필요 패키지 리스팅 : `pip freeze > requirements.txt`
 - 파일 UTF-8으로 읽고 쓰기
     - `open("경로", encoding='UTF-8')`
 - Datetime default 생김새 : `%Y-%m-%dT%H:%M:%S%z`
-
 - Outer scope의 변수에 접근하기 : `nonlocal 변수명` 하면 접근 가능해짐
 - Except 여러 개 : `or`이 아니라 `(A, B, C) as e` 이렇게
 - URL encode : `urllib.parse.quote`. 반대로는 `unquote`
+- Iterator 돌리면서 값 하나로 빼내기 : `reduce(누적자, 반복자, 누적자_기본값)`
+    - `reduce(lambda x,y: x or y, [a in [1,2,3] for a in [1,2,4]], False)`
+
 - 
