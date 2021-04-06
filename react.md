@@ -88,6 +88,20 @@ function Example() {
     - `useSelector`로 리덕스 상태를 조회했을 때는 최적화 작업이 자동으로 이뤄지지 않아 `React.memo`를 컨테이너 컴포넌트에 사용해야 한다.
         - `React.memo(컨테이너_컴포넌트)`
 
+## Dotenv
+
+```js
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const aptKey = process.env.REACT_APP_API_KEY;
+```
+
+- 리액트에서는 앞에 `REACT_APP`을 붙여야 한다고 함
+
+- 
+
 ## 기타
 
 - 단순히 하위에 들어오는 컴포넌트가 `children`, 태그 사이에 작성한 내용을 가리킴
