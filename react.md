@@ -109,4 +109,5 @@ const aptKey = process.env.REACT_APP_API_KEY;
 - Title을 바꾸기 위해 `react-helmet`을 썼다.
     - `<Helmet><title>타이틀</title></Helmet>`
 - Provider > BrowserRouter > App
+- 부모 props가 바뀌거나 render()만 돌 때는 componentDidUpdate로 변화를 감지하면 되겠다.
 - 

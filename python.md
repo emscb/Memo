@@ -97,7 +97,7 @@
 * float을 지정한 자리수만큼 출력하기 : `%.3f` \(소수점 3자리까지\)
 * string 출력 width 지정해주기 \(오른쪽으로 붙음\) : `%5s`
 * string 출력시 width를 주고 가운데 정렬 : `print(a.center(width))`
-* 한 줄에 계속 출력하기 : `print(f"{i}번째 출력\r", end="")`
+* 한 줄에 계속 출력하기 : `print(f"{i}번째 출력", end="\r")`
 * f string formatting
   * 왼쪽 정렬 : `{문자:10s}`
   * 가운데 정렬 : `{정수:^10d}`
