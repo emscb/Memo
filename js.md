@@ -103,6 +103,8 @@
     - `map((element) => {...})` : 하나씩 꺼내서 뭘 해보기
     - `filter((element) => 조건)` : 하나씩 조건에 맞는지 체크 true면 반환
     - `flat([depth])` : 평탄화
+    - `forEach((element) => {...})` : `map`이랑 비슷한데 return 안 됨
+    - `some` : `forEach`와 비슷함. 중간에 return하면 더 이상 순회 안 함. 반환은 T/F
 - `[a, b, c] = [1, 2, 3]` 가능
 - `in` 연산자
     - 속성이 객체에 존재하는지 체크 (기존의 값 체크 아님)
