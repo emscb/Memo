@@ -374,4 +374,5 @@ rl.on('line', (line) => {
     - `iconv-lite`로 UTF-8으로 디코딩 (잘 안 된다)
 - `toLocaleString()` : 세 자리 단위로 콤마 찍기
 - Event의 value가 안 나오면 innerText를 해보자
+- `alert`말고 확인/취소를 받고 싶을 땐 `window.confirm()`
 - 
